@@ -261,7 +261,7 @@ def run_ultra_accuracy_test():
 
     # Validation phase
     print(f"\n=== Validation Phase ===")
-    n_test = 1000  # Large test set for accurate statistics
+    n_test = 5000  # Very large test set for accurate statistics
     print(f"Testing on {n_test} points...")
 
     # Generate test points

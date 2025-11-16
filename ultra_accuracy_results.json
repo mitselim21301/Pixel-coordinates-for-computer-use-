@@ -9,10 +9,10 @@
     "use_subpixel": true
   },
   "results": {
-    "mean_error": 0.24229899433118782,
-    "median_error": 0.22924621812658527,
-    "std_error": 0.13123063902595197,
-    "max_error": 0.8340765015820908,
+    "mean_error": 0.24317760530465174,
+    "median_error": 0.22993578587471475,
+    "std_error": 0.12420517476784379,
+    "max_error": 0.8011349861377256,
     "success_rate": 1.0,
     "within_1px": 1.0,
     "within_2px": 1.0,
