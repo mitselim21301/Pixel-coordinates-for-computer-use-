@@ -1,0 +1,10 @@
+{
+  "test_type": "real_world_window_clicking",
+  "num_elements_tested": 48,
+  "mean_error": 0.6516747755304911,
+  "median_error": 0.6402542462220346,
+  "std_error": 0.34228633913469186,
+  "max_error": 1.4658139254778666,
+  "success_rate_2px": 1.0,
+  "success_rate_1px": 0.8541666666666666
+}
