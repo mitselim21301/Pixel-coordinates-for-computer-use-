@@ -1,0 +1,224 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-accurate-click-server"
+version = "1.0.0"
+description = "MCP server for accurate OCR-based screen clicking with 99.95%+ accuracy"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "MCP Accurate Click Team", email = "team@mcp-accurate-click.dev"}
+]
+maintainers = [
+    {name = "MCP Accurate Click Team", email = "team@mcp-accurate-click.dev"}
+]
+keywords = [
+    "mcp",
+    "model-context-protocol",
+    "ocr",
+    "computer-use",
+    "automation",
+    "click",
+    "paddleocr",
+    "screen-automation"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "numpy>=1.20.0,<2.0",
+    "scipy>=1.7.0,<2.0",
+    "paddleocr>=2.7.0,<3.0",
+    "paddlepaddle>=2.5.0,<3.0",
+    "opencv-python>=4.5.0,<5.0",
+    "Pillow>=9.0.0,<11.0",
+    "mss>=6.1.0,<8.0",
+    "mcp>=0.9.0,<2.0",
+    "click>=8.0.0,<9.0",
+    "pydantic>=2.0.0,<3.0",
+    "asyncio-atexit>=1.0.0,<2.0",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "paddlepaddle-gpu>=2.5.0,<3.0",
+]
+dev = [
+    "pytest>=7.4.0,<8.0",
+    "pytest-cov>=4.1.0,<5.0",
+    "pytest-asyncio>=0.21.0,<1.0",
+    "ruff>=0.1.0,<1.0",
+    "black>=23.0.0,<25.0",
+    "mypy>=1.5.0,<2.0",
+    "types-Pillow>=10.0.0,<11.0",
+    "pre-commit>=3.4.0,<4.0",
+]
+test = [
+    "pytest>=7.4.0,<8.0",
+    "pytest-cov>=4.1.0,<5.0",
+    "pytest-asyncio>=0.21.0,<1.0",
+    "pytest-timeout>=2.1.0,<3.0",
+    "pytest-xdist>=3.3.0,<4.0",
+]
+docs = [
+    "sphinx>=7.0.0,<8.0",
+    "sphinx-rtd-theme>=1.3.0,<2.0",
+    "myst-parser>=2.0.0,<3.0",
+]
+all = [
+    "mcp-accurate-click-server[gpu,dev,test,docs]",
+]
+
+[project.urls]
+Homepage = "https://github.com/mcp-accurate-click/mcp-accurate-click-server"
+Documentation = "https://mcp-accurate-click.readthedocs.io"
+Repository = "https://github.com/mcp-accurate-click/mcp-accurate-click-server"
+"Bug Tracker" = "https://github.com/mcp-accurate-click/mcp-accurate-click-server/issues"
+Changelog = "https://github.com/mcp-accurate-click/mcp-accurate-click-server/blob/main/CHANGELOG.md"
+
+[project.scripts]
+mcp-accurate-click = "mcp_accurate_click.cli:main"
+mcp-click-server = "mcp_accurate_click.server:main"
+mcp-click-calibrate = "mcp_accurate_click.calibration:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mcp_accurate_click*"]
+exclude = ["tests*", "docs*"]
+
+[tool.setuptools.package-data]
+mcp_accurate_click = ["py.typed", "*.json", "*.yaml"]
+
+# ============================================================================
+# Tool Configuration
+# ============================================================================
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "ARG", # flake8-unused-arguments
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "E501",  # line too long (handled by black)
+    "B008",  # do not perform function calls in argument defaults
+    "B905",  # zip strict
+]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/**" = ["ARG001", "ARG002"]
+
+[tool.ruff.isort]
+known-first-party = ["mcp_accurate_click"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+strict_equality = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+    "paddleocr.*",
+    "paddlepaddle.*",
+    "mss.*",
+    "cv2.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--cov=mcp_accurate_click",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "gpu: marks tests that require GPU",
+    "windows: marks tests that require Windows",
+]
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*/__pycache__/*",
+    "*/site-packages/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]

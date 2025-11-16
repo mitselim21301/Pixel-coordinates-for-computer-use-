@@ -1,0 +1,72 @@
+{
+  "description": "Mock OCR detection results for testing",
+  "image_width": 1920,
+  "image_height": 1080,
+  "detections": [
+    {
+      "bbox": [[100, 100], [200, 100], [200, 130], [100, 130]],
+      "text": "OK",
+      "confidence": 0.95,
+      "center": [150, 115]
+    },
+    {
+      "bbox": [[220, 100], [320, 100], [320, 130], [220, 130]],
+      "text": "Cancel",
+      "confidence": 0.92,
+      "center": [270, 115]
+    },
+    {
+      "bbox": [[50, 50], [150, 50], [150, 75], [50, 75]],
+      "text": "File",
+      "confidence": 0.88,
+      "center": [100, 62.5]
+    },
+    {
+      "bbox": [[160, 50], [260, 50], [260, 75], [160, 75]],
+      "text": "Edit",
+      "confidence": 0.90,
+      "center": [210, 62.5]
+    },
+    {
+      "bbox": [[270, 50], [370, 50], [370, 75], [270, 75]],
+      "text": "View",
+      "confidence": 0.89,
+      "center": [320, 62.5]
+    },
+    {
+      "bbox": [[800, 500], [950, 500], [950, 540], [800, 540]],
+      "text": "Submit",
+      "confidence": 0.96,
+      "center": [875, 520]
+    },
+    {
+      "bbox": [[1000, 500], [1150, 500], [1150, 540], [1000, 540]],
+      "text": "Reset",
+      "confidence": 0.91,
+      "center": [1075, 520]
+    },
+    {
+      "bbox": [[1700, 50], [1750, 50], [1750, 80], [1700, 80]],
+      "text": "X",
+      "confidence": 0.97,
+      "center": [1725, 65]
+    },
+    {
+      "bbox": [[500, 300], [700, 300], [700, 350], [500, 350]],
+      "text": "Click Here",
+      "confidence": 0.94,
+      "center": [600, 325]
+    },
+    {
+      "bbox": [[100, 900], [300, 900], [300, 950], [100, 950]],
+      "text": "Settings",
+      "confidence": 0.93,
+      "center": [200, 925]
+    }
+  ],
+  "metadata": {
+    "ocr_engine": "PaddleOCR",
+    "timestamp": "2024-11-16T12:00:00Z",
+    "processing_time_ms": 150
+  }
+}

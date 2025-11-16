@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  # CPU-only version
+  mcp-server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: mcp-accurate-click-server:latest
+    container_name: mcp-accurate-click
+    restart: unless-stopped
+    environment:
+      - MCP_LOG_LEVEL=info
+      - MCP_CALIBRATION_FILE=/app/calibration/default.npz
+    volumes:
+      - ./data:/app/data
+      - ./calibration:/app/calibration
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: mcp-click-server
+
+  # GPU-enabled version
+  mcp-server-gpu:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.gpu
+    image: mcp-accurate-click-server:gpu
+    container_name: mcp-accurate-click-gpu
+    restart: unless-stopped
+    runtime: nvidia
+    environment:
+      - MCP_LOG_LEVEL=info
+      - MCP_CALIBRATION_FILE=/app/calibration/default.npz
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    volumes:
+      - ./data:/app/data
+      - ./calibration:/app/calibration
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: mcp-click-server --use-gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # Calibration service (run once)
+  calibrate:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: mcp-accurate-click-server:latest
+    container_name: mcp-calibrate
+    volumes:
+      - ./calibration:/app/calibration
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    environment:
+      - DISPLAY=${DISPLAY}
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: mcp-click-calibrate
+    profiles:
+      - calibration
+
+volumes:
+  data:
+    driver: local
+  calibration:
+    driver: local

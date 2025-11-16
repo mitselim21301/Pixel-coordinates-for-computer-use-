@@ -1,0 +1,208 @@
+{
+  "description": "Sample window configurations for testing real-world scenarios",
+  "screen_width": 1920,
+  "screen_height": 1080,
+  "windows": [
+    {
+      "id": "small_dialog_1",
+      "title": "Alert Dialog",
+      "x": 760,
+      "y": 440,
+      "width": 400,
+      "height": 200,
+      "window_type": "dialog",
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "OK",
+          "local_x": 120,
+          "local_y": 150,
+          "width": 80,
+          "height": 30
+        },
+        {
+          "type": "button",
+          "text": "Cancel",
+          "local_x": 220,
+          "local_y": 150,
+          "width": 80,
+          "height": 30
+        },
+        {
+          "type": "text",
+          "text": "Are you sure?",
+          "local_x": 100,
+          "local_y": 50,
+          "width": 200,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "id": "main_window_1",
+      "title": "Main Application",
+      "x": 100,
+      "y": 100,
+      "width": 1200,
+      "height": 800,
+      "window_type": "main",
+      "ui_elements": [
+        {
+          "type": "menu_item",
+          "text": "File",
+          "local_x": 10,
+          "local_y": 10,
+          "width": 60,
+          "height": 25
+        },
+        {
+          "type": "menu_item",
+          "text": "Edit",
+          "local_x": 80,
+          "local_y": 10,
+          "width": 60,
+          "height": 25
+        },
+        {
+          "type": "button",
+          "text": "Save",
+          "local_x": 1050,
+          "local_y": 750,
+          "width": 80,
+          "height": 30
+        },
+        {
+          "type": "close_button",
+          "text": "X",
+          "local_x": 1160,
+          "local_y": 10,
+          "width": 30,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "id": "small_notification",
+      "title": "Notification",
+      "x": 1500,
+      "y": 50,
+      "width": 350,
+      "height": 150,
+      "window_type": "notification",
+      "ui_elements": [
+        {
+          "type": "close_button",
+          "text": "X",
+          "local_x": 320,
+          "local_y": 10,
+          "width": 20,
+          "height": 20
+        },
+        {
+          "type": "text",
+          "text": "New message received",
+          "local_x": 20,
+          "local_y": 50,
+          "width": 300,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "id": "settings_panel",
+      "title": "Settings",
+      "x": 50,
+      "y": 50,
+      "width": 600,
+      "height": 700,
+      "window_type": "panel",
+      "ui_elements": [
+        {
+          "type": "checkbox",
+          "text": "Enable feature",
+          "local_x": 50,
+          "local_y": 100,
+          "width": 200,
+          "height": 25
+        },
+        {
+          "type": "button",
+          "text": "Apply",
+          "local_x": 400,
+          "local_y": 650,
+          "width": 80,
+          "height": 30
+        },
+        {
+          "type": "button",
+          "text": "Cancel",
+          "local_x": 500,
+          "local_y": 650,
+          "width": 80,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "id": "maximized_browser",
+      "title": "Web Browser",
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080,
+      "window_type": "maximized",
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Back",
+          "local_x": 20,
+          "local_y": 60,
+          "width": 60,
+          "height": 30
+        },
+        {
+          "type": "button",
+          "text": "Forward",
+          "local_x": 90,
+          "local_y": 60,
+          "width": 60,
+          "height": 30
+        },
+        {
+          "type": "link",
+          "text": "Home",
+          "local_x": 100,
+          "local_y": 150,
+          "width": 80,
+          "height": 25
+        }
+      ]
+    }
+  ],
+  "test_scenarios": [
+    {
+      "name": "click_dialog_buttons",
+      "description": "Click OK and Cancel buttons in small dialog",
+      "window_id": "small_dialog_1",
+      "target_elements": ["OK", "Cancel"]
+    },
+    {
+      "name": "click_menu_items",
+      "description": "Click menu items in main window",
+      "window_id": "main_window_1",
+      "target_elements": ["File", "Edit"]
+    },
+    {
+      "name": "close_notification",
+      "description": "Click close button on notification",
+      "window_id": "small_notification",
+      "target_elements": ["X"]
+    },
+    {
+      "name": "interact_with_settings",
+      "description": "Interact with settings panel",
+      "window_id": "settings_panel",
+      "target_elements": ["Enable feature", "Apply", "Cancel"]
+    }
+  ]
+}

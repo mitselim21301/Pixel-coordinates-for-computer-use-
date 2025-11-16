@@ -1,0 +1,77 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  create-release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Generate changelog
+      id: changelog
+      run: |
+        # Get the previous tag
+        PREVIOUS_TAG=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1) 2>/dev/null || echo "")
+
+        if [ -z "$PREVIOUS_TAG" ]; then
+          CHANGELOG=$(git log --pretty=format:"* %s (%h)" --reverse)
+        else
+          CHANGELOG=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"* %s (%h)" --reverse)
+        fi
+
+        echo "changelog<<EOF" >> $GITHUB_OUTPUT
+        echo "$CHANGELOG" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        body: |
+          ## Changes
+
+          ${{ steps.changelog.outputs.changelog }}
+
+          ## Installation
+
+          ### PyPI
+          ```bash
+          pip install mcp-accurate-click-server
+          ```
+
+          ### Docker
+          ```bash
+          docker pull mcp-accurate-click/server:${{ github.ref_name }}
+          ```
+
+          ### From Source
+          ```bash
+          git clone https://github.com/mcp-accurate-click/mcp-accurate-click-server.git
+          cd mcp-accurate-click-server
+          git checkout ${{ github.ref_name }}
+          pip install -e .
+          ```
+
+          ## Quick Start
+
+          1. Install the package
+          2. Run calibration: `mcp-click-calibrate`
+          3. Start server: `mcp-click-server`
+          4. Configure Claude Desktop (see README)
+
+          ## Documentation
+
+          Full documentation: https://mcp-accurate-click.readthedocs.io
+        draft: false
+        prerelease: false
+        generate_release_notes: true

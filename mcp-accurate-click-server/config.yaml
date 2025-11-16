@@ -1,0 +1,219 @@
+# MCP Accurate Click Server Configuration
+# ==========================================
+# Default configuration based on research findings for 99.95%+ accuracy
+#
+# Research References:
+# - 100 calibration points achieves 99.95-99.98% accuracy (test_ultra_accuracy.py)
+# - Regional calibration (2x2 grid) corrects non-uniform errors
+# - Multi-pass OCR with confidence weighting improves reliability
+# - Sub-pixel refinement reduces mean error to <0.7 pixels
+
+schema_version: 1.0.0
+
+# OCR Configuration
+# -----------------
+# PaddleOCR settings for text detection and recognition
+ocr:
+  # Language model (default: English)
+  language: en
+
+  # GPU acceleration (set to true if CUDA-enabled GPU available)
+  # GPU provides 3-10x speedup for OCR operations
+  use_gpu: false
+
+  # Use angle classification for rotated text
+  use_angle_cls: true
+
+  # Confidence threshold for OCR results (0.0-1.0)
+  # Lower = more detections but less reliable
+  # Higher = fewer detections but more accurate
+  confidence_threshold: 0.6
+
+  # Show detailed OCR logs (useful for debugging)
+  show_log: false
+
+  # Detection thresholds
+  det_db_thresh: 0.3        # Binary map threshold
+  det_db_box_thresh: 0.6    # Box threshold for filtering
+
+  # Recognition batch size (affects speed/memory tradeoff)
+  rec_batch_num: 6
+
+  # Multi-pass OCR for higher accuracy
+  # Run OCR multiple times and average results
+  multi_pass_enabled: true
+  num_passes: 3
+
+  # Averaging method for multi-pass results
+  # Options: mean, median, confidence_weighted
+  averaging_method: confidence_weighted
+
+
+# Calibration Configuration
+# --------------------------
+# Settings for coordinate transformation calibration
+calibration:
+  # Number of calibration points
+  # Research findings:
+  #   30 points  -> 99.8% accuracy within 2 pixels
+  #   100 points -> 99.95% accuracy within 2 pixels
+  #   Recommended: 100 for production use
+  num_points: 100
+
+  # Regional grid for per-region calibration
+  # Format: [rows, columns]
+  # 2x2 = 4 regions (top-left, top-right, bottom-left, bottom-right)
+  # Corrects non-uniform errors across screen
+  regional_grid: [2, 2]
+
+  # Sub-pixel refinement using cornerSubPix algorithm
+  # Improves accuracy from ~1.0px to ~0.7px mean error
+  use_subpixel_refinement: true
+  subpixel_window_size: 5
+
+  # Auto-recalibration settings
+  auto_recalibrate_enabled: true
+  recalibrate_on_dpi_change: true
+  recalibrate_on_accuracy_drop: true
+
+  # Trigger recalibration if success rate drops below threshold
+  accuracy_drop_threshold: 0.95  # 95%
+
+  # Calibration point distribution pattern
+  # Options:
+  #   uniform_grid  - Evenly spaced grid
+  #   adaptive_grid - More points near edges/corners
+  #   random        - Random distribution
+  pattern_type: adaptive_grid
+
+  # Weight factor for edge points (adaptive_grid only)
+  # 1.5 means 50% more points near edges
+  edge_weight: 1.5
+
+  # Validation settings
+  # Hold out portion of calibration points for validation
+  validation_split: 0.2  # 20%
+
+  # Minimum required accuracy on validation set
+  min_validation_accuracy: 0.995  # 99.5%
+
+
+# Click Configuration
+# -------------------
+# Settings for executing mouse clicks
+click:
+  # Mouse button to click
+  # Options: left, right, middle
+  button: left
+
+  # Delay before clicking (seconds)
+  # Allows UI to settle before click
+  delay_before_click: 0.05
+
+  # Delay after clicking (seconds)
+  # Allows click to register before next action
+  delay_after_click: 0.1
+
+  # Click validation
+  # Verify click landed in expected location
+  validate_click: true
+  validation_timeout: 2.0  # seconds
+
+  # Retry on failure
+  retry_on_failure: true
+  max_retries: 3
+
+  # Safety settings
+  # Require user confirmation before clicks (for testing)
+  require_confirmation: false
+
+  # Exclusion zones (no-click areas)
+  # Format: list of {x, y, width, height} rectangles
+  # Example: [{x: 0, y: 0, width: 100, height: 50}]
+  exclusion_zones: []
+
+
+# Performance Configuration
+# --------------------------
+# Optimization settings for speed and resource usage
+performance:
+  # Caching
+  cache_enabled: true
+  cache_ocr_results: true
+  cache_ttl: 300  # seconds (5 minutes)
+  max_cache_size: 1000  # Maximum number of cached items
+
+  # Threading
+  # Use multi-threading for parallel OCR operations
+  use_threading: true
+  max_workers: 4
+
+  # Memory management
+  batch_size: 10
+  clear_cache_on_recalibrate: true
+
+
+# Logging Configuration
+# ----------------------
+# Control log output and verbosity
+logging:
+  # Log level
+  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: INFO
+
+  # File logging
+  log_to_file: true
+  log_file: ~/.mcp-accurate-click/logs/server.log
+
+  # Log rotation settings
+  max_log_size: 10485760  # 10 MB
+  backup_count: 5  # Keep 5 old log files
+
+  # Performance logging
+  log_performance_metrics: true
+  log_click_accuracy: true
+
+  # OCR result logging (can be very verbose)
+  log_ocr_results: false
+
+
+# Advanced Settings
+# -----------------
+# Expert-level configuration options
+
+# Screen capture settings
+screen_capture:
+  # Capture format (affects performance and quality)
+  # Options: RGB, RGBA, BGR, BGRA
+  format: RGB
+
+  # Compression level for cached screenshots (0-9)
+  compression: 6
+
+# DPI awareness
+dpi:
+  # Enable DPI awareness (critical for accuracy)
+  enabled: true
+
+  # DPI awareness mode (Windows)
+  # Options: system, per_monitor_v1, per_monitor_v2
+  mode: per_monitor_v2
+
+# Error handling
+error_handling:
+  # Maximum consecutive errors before triggering recalibration
+  max_consecutive_errors: 10
+
+  # Error notification threshold
+  notify_on_error_rate: 0.1  # Notify if >10% errors
+
+# Experimental features
+experimental:
+  # Use deep learning for click point refinement
+  use_dl_refinement: false
+
+  # Predictive caching based on usage patterns
+  predictive_cache: false
+
+  # Adaptive calibration (adjust based on accuracy feedback)
+  adaptive_calibration: false

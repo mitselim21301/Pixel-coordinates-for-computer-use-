@@ -1,0 +1,38 @@
+{
+  "mcpServers": {
+    "accurate-click": {
+      "command": "mcp-click-server",
+      "args": [],
+      "env": {
+        "MCP_LOG_LEVEL": "info",
+        "MCP_CALIBRATION_FILE": "/path/to/your/calibration.npz"
+      },
+      "description": "Accurate OCR-based screen clicking with 99.95%+ accuracy",
+      "capabilities": [
+        "click_on_text",
+        "click_at_coordinates",
+        "find_text",
+        "capture_screen",
+        "calibrate"
+      ]
+    },
+    "accurate-click-gpu": {
+      "command": "mcp-click-server",
+      "args": ["--use-gpu"],
+      "env": {
+        "MCP_LOG_LEVEL": "info",
+        "MCP_CALIBRATION_FILE": "/path/to/your/calibration.npz"
+      },
+      "description": "GPU-accelerated version for faster OCR processing"
+    },
+    "accurate-click-debug": {
+      "command": "mcp-click-server",
+      "args": ["--log-level", "debug"],
+      "env": {
+        "MCP_LOG_LEVEL": "debug",
+        "MCP_DEBUG": "1"
+      },
+      "description": "Debug mode with verbose logging"
+    }
+  }
+}

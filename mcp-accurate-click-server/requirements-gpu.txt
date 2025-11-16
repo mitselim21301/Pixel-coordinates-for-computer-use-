@@ -1,0 +1,10 @@
+# GPU-Accelerated Dependencies
+# Install with: pip install -r requirements-gpu.txt
+# Requires CUDA-capable GPU and CUDA toolkit installed
+
+# Include core requirements (but replace paddlepaddle with GPU version)
+-r requirements.txt
+
+# GPU-accelerated PaddlePaddle
+# Note: This will override the CPU version from requirements.txt
+paddlepaddle-gpu>=2.5.0,<3.0
