@@ -1,0 +1,20 @@
+{
+  "no_calibration": {
+    "mean_error": 4.531287647330424,
+    "std_error": 0.5273127369537252,
+    "success_rate": 0.0
+  },
+  "with_calibration": {
+    "mean_error": 0.7069447897020102,
+    "std_error": 0.3696755108316521,
+    "success_rate": 0.998,
+    "p_value": 1.5867328757423636e-282,
+    "t_statistic": -78.21344027852842
+  },
+  "config": {
+    "n_calibration": 30,
+    "n_test": 500,
+    "accuracy_threshold": 2.0,
+    "target_success_rate": 0.99
+  }
+}
