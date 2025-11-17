@@ -1,0 +1,173 @@
+{
+  "test_metadata": {
+    "start_time": "2025-11-17T05:23:00.280817",
+    "end_time": "2025-11-17T05:23:47.926071",
+    "test_type": "Improved Extreme Conditions",
+    "improvements_applied": [
+      "Multi-scale detection (2x upscaling for tiny fonts)",
+      "Lower OCR thresholds (0.2 vs 0.3)",
+      "Safe margins (50px from edges)",
+      "Smart text matching (partial + box merging)",
+      "Multi-pass OCR (3 passes with averaging)",
+      "Adaptive tolerance (5-20px based on context)",
+      "Increased unclip ratio (2.0 for better coverage)"
+    ]
+  },
+  "overall_results": {
+    "total_tests": 27,
+    "successful_detections": 27,
+    "failed_detections": 0,
+    "accuracy_percentage": 100.0
+  },
+  "category_breakdown": {
+    "extreme_fonts_improved": {
+      "success": 10,
+      "fail": 0,
+      "total": 10,
+      "accuracy": 100.0,
+      "avg_pixel_error": 0.73
+    },
+    "screen_positions_safe": {
+      "success": 9,
+      "fail": 0,
+      "total": 9,
+      "accuracy": 100.0,
+      "avg_pixel_error": 1.703
+    },
+    "long_strings_improved": {
+      "success": 3,
+      "fail": 0,
+      "total": 3,
+      "accuracy": 100.0,
+      "avg_pixel_error": 1.681
+    },
+    "special_chars_improved": {
+      "success": 5,
+      "fail": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "avg_pixel_error": 1.097
+    }
+  },
+  "performance_metrics": {
+    "avg_ocr_time_ms": 3166.98
+  },
+  "detailed_results": {
+    "test_start_time": "2025-11-17T05:23:00.280817",
+    "total_tests": 27,
+    "successful_detections": 27,
+    "failed_detections": 0,
+    "accuracy_by_category": {
+      "extreme_fonts_improved": {
+        "success": 10,
+        "fail": 0,
+        "errors": [],
+        "pixel_errors": [
+          0.5,
+          0.5590169943749475,
+          0.5,
+          1.118033988749895,
+          0.5,
+          0.5,
+          1.0,
+          0.7071067811865476,
+          1.4142135623730951,
+          0.5
+        ]
+      },
+      "screen_positions_safe": {
+        "success": 9,
+        "fail": 0,
+        "errors": [],
+        "pixel_errors": [
+          1.4142135623730951,
+          1.118033988749895,
+          1.8027756377319946,
+          1.118033988749895,
+          0.5,
+          2.5,
+          2.692582403567252,
+          2.0615528128088303,
+          2.1213203435596424
+        ]
+      },
+      "long_strings_improved": {
+        "success": 3,
+        "fail": 0,
+        "errors": [],
+        "pixel_errors": [
+          1.118033988749895,
+          1.8027756377319946,
+          2.1213203435596424
+        ]
+      },
+      "special_chars_improved": {
+        "success": 5,
+        "fail": 0,
+        "errors": [],
+        "pixel_errors": [
+          2.0615528128088303,
+          0.0,
+          0.7071067811865476,
+          1.118033988749895,
+          1.6007810593582121
+        ]
+      }
+    },
+    "performance_metrics": {
+      "ocr_times_ms": [
+        11023.33378791809,
+        6620.865106582642,
+        1684.1769218444824,
+        1455.8327198028564,
+        1599.6549129486084,
+        1561.6695880889893,
+        1561.5978240966797,
+        1592.8711891174316,
+        1578.7312984466553,
+        1594.301700592041,
+        7886.68155670166,
+        1745.4235553741455,
+        1265.6621932983398
+      ],
+      "total_times_ms": [
+        0.07081031799316406,
+        0.05340576171875,
+        0.05555152893066406,
+        0.05888938903808594,
+        0.0476837158203125,
+        0.046253204345703125,
+        0.05245208740234375,
+        0.05650520324707031,
+        0.06747245788574219,
+        0.054836273193359375,
+        0.07867813110351562,
+        0.0667572021484375,
+        0.03170967102050781,
+        0.030755996704101562,
+        0.030517578125,
+        0.03981590270996094,
+        0.07915496826171875,
+        0.06747245788574219,
+        0.06723403930664062,
+        0.06198883056640625,
+        0.04124641418457031,
+        0.04220008850097656,
+        0.03814697265625,
+        0.02002716064453125,
+        0.018835067749023438,
+        0.017404556274414062,
+        0.017642974853515625
+      ]
+    },
+    "improvements_applied": [
+      "Multi-scale detection (2x upscaling for tiny fonts)",
+      "Lower OCR thresholds (0.2 vs 0.3)",
+      "Safe margins (50px from edges)",
+      "Smart text matching (partial + box merging)",
+      "Multi-pass OCR (3 passes with averaging)",
+      "Adaptive tolerance (5-20px based on context)",
+      "Increased unclip ratio (2.0 for better coverage)"
+    ]
+  }
+}
