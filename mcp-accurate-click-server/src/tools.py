@@ -19,6 +19,14 @@ from pathlib import Path
 from mcp.server import Server
 from mcp.types import Tool, TextContent
 
+# Import real OCR engine with multilingual support
+try:
+    from .ocr_engine import OCREngine, detect_gpu_support
+    USE_REAL_OCR = True
+except ImportError:
+    logger.warning("Could not import OCREngine, will use mock implementation")
+    USE_REAL_OCR = False
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -306,10 +314,26 @@ class AccurateClickSystem:
     """
     Complete accurate click system with regional calibration
     Achieves 100% accuracy (99.8%+ within 2px)
+    Now with multilingual OCR support (English, Chinese, Cyrillic, Korean, etc.)
     """
 
-    def __init__(self):
-        self.ocr_engine = MockOCREngine()
+    def __init__(self, enable_multilingual: bool = True):
+        # Use real OCR engine with multilingual support if available
+        if USE_REAL_OCR:
+            logger.info("Initializing real OCR engine with multilingual support")
+            self.ocr_engine = OCREngine(
+                lang='en',  # Primary language
+                use_gpu=detect_gpu_support(),
+                num_passes=3,
+                min_confidence=0.5,
+                show_log=False,
+                enable_multilingual=enable_multilingual,
+                fallback_langs=['ch', 'cyrillic', 'korean', 'en']
+            )
+        else:
+            logger.warning("Using mock OCR engine - install PaddleOCR for production use")
+            self.ocr_engine = MockOCREngine()
+
         self.screenshot_manager = MockScreenshotManager()
         self.click_executor = MockClickExecutor()
 
@@ -322,7 +346,7 @@ class AccurateClickSystem:
         self.monitors: List[MonitorInfo] = []
         self._initialize_monitors()
 
-        logger.info("AccurateClickSystem initialized")
+        logger.info("AccurateClickSystem initialized with multilingual support")
 
     def _initialize_monitors(self):
         """Initialize monitor information"""

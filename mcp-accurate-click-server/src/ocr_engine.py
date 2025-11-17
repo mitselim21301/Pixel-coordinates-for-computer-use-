@@ -174,6 +174,7 @@ class OCREngine:
 
     Achieves 100% accuracy through:
     - Multiple OCR passes with result averaging
+    - Multilingual support with automatic fallback
     - Confidence-weighted positioning
     - Sub-pixel coordinate precision
     - Robust text detection and recognition
@@ -184,6 +185,7 @@ class OCREngine:
     - Bounding box format conversion
     - GPU acceleration
     - Batch processing
+    - Multi-language fallback (English, Chinese, Cyrillic, Korean, etc.)
     """
 
     def __init__(
@@ -192,17 +194,21 @@ class OCREngine:
         use_gpu: bool = False,
         num_passes: int = 3,
         min_confidence: float = 0.5,
-        show_log: bool = False
+        show_log: bool = False,
+        enable_multilingual: bool = True,
+        fallback_langs: Optional[List[str]] = None
     ):
         """
         Initialize OCR engine with optimal PaddleOCR settings.
 
         Args:
-            lang: Language code ('en', 'ch', etc.)
+            lang: Primary language code ('en', 'ch', 'cyrillic', 'korean', etc.)
             use_gpu: Enable GPU acceleration (requires paddlepaddle-gpu)
             num_passes: Number of OCR passes for averaging (3 recommended)
             min_confidence: Minimum confidence threshold for results
             show_log: Show PaddleOCR debug logs
+            enable_multilingual: Enable multi-language fallback for better coverage
+            fallback_langs: List of fallback languages to try if primary fails
 
         Raises:
             RuntimeError: If PaddleOCR initialization fails
@@ -211,11 +217,18 @@ class OCREngine:
         self.use_gpu = use_gpu
         self.num_passes = num_passes
         self.min_confidence = min_confidence
+        self.enable_multilingual = enable_multilingual
 
-        logger.info(f"Initializing OCR Engine (lang={lang}, GPU={use_gpu}, passes={num_passes})")
+        # Default fallback languages for comprehensive coverage
+        if fallback_langs is None:
+            self.fallback_langs = ['ch', 'cyrillic', 'korean', 'en']
+        else:
+            self.fallback_langs = fallback_langs
+
+        logger.info(f"Initializing OCR Engine (lang={lang}, multilingual={enable_multilingual}, GPU={use_gpu}, passes={num_passes})")
 
         try:
-            # Initialize PaddleOCR with optimal settings from research
+            # Initialize primary OCR model
             self.ocr = PaddleOCR(
                 use_angle_cls=True,        # Enable text angle detection (critical for rotated text)
                 lang=lang,                  # Language
@@ -229,11 +242,34 @@ class OCREngine:
                 det_db_unclip_ratio=1.6     # Expand text boxes slightly for better coverage
             )
 
+            # Initialize fallback OCR models for multilingual support
+            self.fallback_ocrs: Dict[str, Any] = {}
+            if enable_multilingual:
+                logger.info(f"Initializing fallback OCR models: {self.fallback_langs}")
+                for fallback_lang in self.fallback_langs:
+                    if fallback_lang != lang:  # Don't duplicate primary language
+                        try:
+                            self.fallback_ocrs[fallback_lang] = PaddleOCR(
+                                use_angle_cls=True,
+                                lang=fallback_lang,
+                                use_gpu=use_gpu,
+                                show_log=False,  # Quiet for fallbacks
+                                det_db_thresh=0.3,
+                                det_db_box_thresh=0.5,
+                                rec_batch_num=6,
+                                drop_score=0.3,
+                                use_dilation=True,
+                                det_db_unclip_ratio=1.6
+                            )
+                            logger.info(f"  ✓ Loaded {fallback_lang} model")
+                        except Exception as e:
+                            logger.warning(f"  ✗ Failed to load {fallback_lang} model: {e}")
+
             # Cache for repeated queries
             self._cache: Dict[str, List[BoundingBox]] = {}
             self._cache_enabled = True
 
-            logger.info("OCR Engine initialized successfully")
+            logger.info("OCR Engine initialized successfully with multilingual support")
 
         except Exception as e:
             logger.error(f"Failed to initialize PaddleOCR: {e}")
@@ -298,7 +334,7 @@ class OCREngine:
         confidence_threshold: float
     ) -> List[BoundingBox]:
         """
-        Extract text with single OCR pass.
+        Extract text with single OCR pass using multilingual fallback.
 
         Args:
             image_path: Path to image file
@@ -307,10 +343,65 @@ class OCREngine:
         Returns:
             List of BoundingBox objects
         """
+        # Try primary OCR model
         result = self.ocr.ocr(image_path, cls=True)
+        bboxes = self._process_ocr_result(result, confidence_threshold)
 
+        # If multilingual is enabled and we got poor results, try fallback models
+        if self.enable_multilingual and len(bboxes) < 3:  # Heuristic: if fewer than 3 detections, try fallbacks
+            logger.debug(f"Primary OCR found only {len(bboxes)} results, trying fallback languages")
+
+            # Track all detected bboxes from all models
+            all_bboxes_by_text = {}
+
+            # Add primary results
+            for bbox in bboxes:
+                key = bbox.text.lower().strip()
+                all_bboxes_by_text[key] = bbox
+
+            # Try each fallback language
+            for fallback_lang, fallback_ocr in self.fallback_ocrs.items():
+                try:
+                    fallback_result = fallback_ocr.ocr(image_path, cls=True)
+                    fallback_bboxes = self._process_ocr_result(fallback_result, confidence_threshold)
+
+                    logger.debug(f"  {fallback_lang} model found {len(fallback_bboxes)} results")
+
+                    # Merge fallback results (avoid duplicates by position)
+                    for fb_bbox in fallback_bboxes:
+                        key = fb_bbox.text.lower().strip()
+
+                        # Add if not already detected or if higher confidence
+                        if key not in all_bboxes_by_text:
+                            all_bboxes_by_text[key] = fb_bbox
+                        elif fb_bbox.confidence > all_bboxes_by_text[key].confidence:
+                            all_bboxes_by_text[key] = fb_bbox
+
+                except Exception as e:
+                    logger.debug(f"  Fallback {fallback_lang} failed: {e}")
+
+            # Return merged results
+            bboxes = list(all_bboxes_by_text.values())
+            logger.debug(f"Multilingual OCR found total of {len(bboxes)} unique text regions")
+
+        return bboxes
+
+    def _process_ocr_result(
+        self,
+        result: Any,
+        confidence_threshold: float
+    ) -> List[BoundingBox]:
+        """
+        Process OCR result into BoundingBox list.
+
+        Args:
+            result: OCR result from PaddleOCR
+            confidence_threshold: Minimum confidence for results
+
+        Returns:
+            List of BoundingBox objects
+        """
         if not result or not result[0]:
-            logger.warning(f"No text detected in {image_path}")
             return []
 
         bboxes = []
@@ -523,12 +614,14 @@ class OCREngine:
         target_text: str,
         min_confidence: Optional[float] = None,
         fuzzy_threshold: float = 0.8,
-        use_averaging: bool = True
+        use_averaging: bool = True,
+        enable_symbol_detection: bool = True
     ) -> Optional[BoundingBox]:
         """
         Find specific text in image and return its coordinates.
 
         Uses fuzzy matching to handle OCR variations and case differences.
+        Falls back to template matching for pure symbols that OCR can't detect.
 
         Args:
             image_path: Path to screenshot image
@@ -536,6 +629,7 @@ class OCREngine:
             min_confidence: Minimum OCR confidence (uses default if None)
             fuzzy_threshold: Minimum text similarity score (0-1)
             use_averaging: Use multi-pass OCR averaging
+            enable_symbol_detection: Enable template matching for symbols
 
         Returns:
             BoundingBox of matched text, or None if not found
@@ -556,7 +650,7 @@ class OCREngine:
             confidence_threshold=confidence_threshold
         )
 
-        # Find best match
+        # Find best match using OCR results
         target_lower = target_text.lower()
         best_match = None
         best_similarity = 0
@@ -574,10 +668,113 @@ class OCREngine:
                 f"Found '{best_match.text}' (similarity: {best_similarity:.2%}, "
                 f"confidence: {best_match.confidence:.2%}) at {best_match.quad_center}"
             )
-        else:
-            logger.warning(f"Text '{target_text}' not found in image")
+            return best_match
 
-        return best_match
+        # If OCR failed and target looks like pure symbols, try template matching
+        if enable_symbol_detection and self._is_pure_symbols(target_text):
+            logger.info(f"Target '{target_text}' appears to be pure symbols, trying template matching")
+            symbol_bbox = self._find_symbols_by_template(image_path, target_text)
+            if symbol_bbox:
+                logger.info(f"Found symbols '{target_text}' via template matching at {symbol_bbox.quad_center}")
+                return symbol_bbox
+
+        logger.warning(f"Text '{target_text}' not found in image")
+        return None
+
+    def _is_pure_symbols(self, text: str) -> bool:
+        """
+        Check if text consists only of symbols/punctuation (not alphanumeric).
+
+        Args:
+            text: Text to check
+
+        Returns:
+            True if text is pure symbols, False otherwise
+        """
+        import string
+        # Check if all characters are punctuation or whitespace
+        return all(c in string.punctuation or c in string.whitespace for c in text)
+
+    def _find_symbols_by_template(
+        self,
+        image_path: str,
+        symbol_text: str
+    ) -> Optional[BoundingBox]:
+        """
+        Find pure symbols using template/image matching.
+
+        This is a fallback for cases where OCR fails on pure punctuation.
+        Creates a rendered template of the symbols and searches for it.
+
+        Args:
+            image_path: Path to screenshot image
+            symbol_text: Symbol text to find
+
+        Returns:
+            BoundingBox if found, None otherwise
+        """
+        try:
+            from PIL import Image, ImageDraw, ImageFont
+
+            # Load the screenshot
+            screenshot = Image.open(image_path)
+            screenshot_gray = screenshot.convert('L')
+            screenshot_array = np.array(screenshot_gray)
+
+            # Create a template image of the symbols
+            # Try different font sizes
+            for font_size in [8, 10, 12, 14, 16, 18]:
+                try:
+                    # Create template
+                    template_img = Image.new('L', (200, 100), color=255)
+                    draw = ImageDraw.Draw(template_img)
+
+                    # Try to use default font
+                    try:
+                        font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', font_size)
+                    except:
+                        font = ImageFont.load_default()
+
+                    # Draw the symbols
+                    draw.text((10, 10), symbol_text, fill=0, font=font)
+
+                    # Crop to content
+                    bbox_coords = template_img.getbbox()
+                    if bbox_coords:
+                        template_img = template_img.crop(bbox_coords)
+                        template_array = np.array(template_img)
+
+                        # Use OpenCV template matching
+                        result = cv2.matchTemplate(screenshot_array, template_array, cv2.TM_CCOEFF_NORMED)
+                        min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+
+                        # If we found a good match (threshold 0.7)
+                        if max_val > 0.7:
+                            h, w = template_array.shape
+                            x, y = max_loc
+
+                            logger.debug(f"Template match found with confidence {max_val:.2f} at ({x}, {y})")
+
+                            return BoundingBox(
+                                x_min=float(x),
+                                y_min=float(y),
+                                x_max=float(x + w),
+                                y_max=float(y + h),
+                                text=symbol_text,
+                                confidence=float(max_val),
+                                quad=[[x, y], [x+w, y], [x+w, y+h], [x, y+h]],
+                                angle=0.0
+                            )
+
+                except Exception as e:
+                    logger.debug(f"Template matching failed for font size {font_size}: {e}")
+                    continue
+
+            return None
+
+        except Exception as e:
+            logger.warning(f"Symbol template matching failed: {e}")
+            return None
 
     def _text_similarity(self, s1: str, s2: str) -> float:
         """
