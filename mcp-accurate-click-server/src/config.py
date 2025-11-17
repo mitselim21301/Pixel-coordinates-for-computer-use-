@@ -317,6 +317,17 @@ class ConfigManager:
 
         logger.info("Configuration validation passed")
 
+    def _convert_tuples_to_lists(self, obj):
+        """Recursively convert tuples to lists for YAML serialization"""
+        if isinstance(obj, dict):
+            return {k: self._convert_tuples_to_lists(v) for k, v in obj.items()}
+        elif isinstance(obj, tuple):
+            return list(obj)
+        elif isinstance(obj, list):
+            return [self._convert_tuples_to_lists(item) for item in obj]
+        else:
+            return obj
+
     def save(self, path: Optional[str] = None):
         """
         Save current configuration to file
@@ -339,6 +350,9 @@ class ConfigManager:
             'performance': asdict(self.performance),
             'logging': asdict(self.logging),
         }
+
+        # Convert tuples to lists for YAML compatibility
+        config_dict = self._convert_tuples_to_lists(config_dict)
 
         # Save as YAML
         try:
@@ -700,7 +714,9 @@ class CalibrationStorage:
         if not self.calibration_file.exists():
             return
 
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # Use microseconds to ensure unique filenames
+        now = datetime.now()
+        timestamp = now.strftime("%Y%m%d_%H%M%S") + f"_{now.microsecond:06d}"
         backup_file = self.backup_dir / f"calibration_{timestamp}.npz"
 
         try:
