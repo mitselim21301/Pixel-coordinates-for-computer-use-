@@ -1,0 +1,229 @@
+{
+  "test_type": "Long Strings - Individual Testing",
+  "total_tests": 20,
+  "successful": 20,
+  "failed": 0,
+  "accuracy": 100.0,
+  "results": [
+    {
+      "text": "The quick brown fox jumps over",
+      "length": 30,
+      "detected": true,
+      "detected_text": "The quick brown fox jumps over",
+      "match_type": "exact",
+      "distance": 144.19518022458308,
+      "tolerance": 500.0,
+      "success": true,
+      "ocr_time_ms": 1548.9284992218018
+    },
+    {
+      "text": "A very long string that contains",
+      "length": 32,
+      "detected": true,
+      "detected_text": "A very long string that contains",
+      "match_type": "exact",
+      "distance": 141.72596798046573,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 722.0947742462158
+    },
+    {
+      "text": "Testing OCR with long text strings",
+      "length": 34,
+      "detected": true,
+      "detected_text": "Testing OCR with long text strings",
+      "match_type": "exact",
+      "distance": 151.23904919034635,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 388.425350189209
+    },
+    {
+      "text": "This is an extremely long sentence",
+      "length": 34,
+      "detected": true,
+      "detected_text": "This is an extremely long sentence",
+      "match_type": "exact",
+      "distance": 155.6807631019324,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 717.167854309082
+    },
+    {
+      "text": "http://www.example.com/very/long/url",
+      "length": 36,
+      "detected": true,
+      "detected_text": "http://www.example.com/very/long/url",
+      "match_type": "exact",
+      "distance": 172.68540760585418,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 694.3879127502441
+    },
+    {
+      "text": "C:\\Users\\Username\\Documents\\File.txt",
+      "length": 36,
+      "detected": true,
+      "detected_text": "C:\\Users\\Username\\Documents\\File.txt",
+      "match_type": "exact",
+      "distance": 174.18381095842403,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 751.6453266143799
+    },
+    {
+      "text": "Lorem ipsum dolor sit amet consectetur",
+      "length": 38,
+      "detected": true,
+      "detected_text": "Lorem ipsum dolor sit amet consectetur",
+      "match_type": "exact",
+      "distance": 180.67719834002298,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 682.5835704803467
+    },
+    {
+      "text": "The quick brown fox jumps over the lazy dog",
+      "length": 43,
+      "detected": true,
+      "detected_text": "The quick brown fox jumps over the lazy dog",
+      "match_type": "exact",
+      "distance": 200.64022527898038,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 727.9963493347168
+    },
+    {
+      "text": "This is a very long string to test OCR accuracy",
+      "length": 47,
+      "detected": true,
+      "detected_text": "This is a very long string to test OCR accuracy",
+      "match_type": "exact",
+      "distance": 206.63615366145393,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 669.7192192077637
+    },
+    {
+      "text": "http://www.example.com/very/long/url/path/to",
+      "length": 44,
+      "detected": true,
+      "detected_text": "http://www.example.com/very/long/url/path/to",
+      "match_type": "exact",
+      "distance": 208.153789300123,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 774.756908416748
+    },
+    {
+      "text": "C:\\Users\\Username\\Documents\\Very\\Long\\Path.txt",
+      "length": 46,
+      "detected": true,
+      "detected_text": "C:\\Users\\Username\\Documents\\Very\\Long\\Path.txt",
+      "match_type": "exact",
+      "distance": 226.14154859291116,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 782.9811573028564
+    },
+    {
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing",
+      "length": 49,
+      "detected": true,
+      "detected_text": "Lorem ipsum dolor sit amet consectetur adipiscing",
+      "match_type": "exact",
+      "distance": 227.12386488434015,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 695.9042549133301
+    },
+    {
+      "text": "The quick brown fox jumps over the lazy dog again",
+      "length": 49,
+      "detected": true,
+      "detected_text": "The quick brown fox jumps over the lazy dog again",
+      "match_type": "exact",
+      "distance": 228.60719586224752,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 750.5242824554443
+    },
+    {
+      "text": "This is an extremely long string for testing purposes",
+      "length": 53,
+      "detected": true,
+      "detected_text": "This is an extremely long string for testing purposes",
+      "match_type": "exact",
+      "distance": 234.1201614556081,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 732.5513362884521
+    },
+    {
+      "text": "http://www.example.com/very/long/url/path/to/resource",
+      "length": 53,
+      "detected": true,
+      "detected_text": "http://www.example.com/very/long/url/path/to/resource",
+      "match_type": "exact",
+      "distance": 249.6282235645641,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 750.666618347168
+    },
+    {
+      "text": "C:\\Users\\Username\\Documents\\Very\\Long\\File\\Path.txt",
+      "length": 51,
+      "detected": true,
+      "detected_text": "C:\\Users\\Username\\Documents\\Very\\Long\\File\\Path.txt",
+      "match_type": "exact",
+      "distance": 244.63084433488757,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 752.4220943450928
+    },
+    {
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "length": 54,
+      "detected": true,
+      "detected_text": "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "match_type": "exact",
+      "distance": 244.63084433488757,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 385.6644630432129
+    },
+    {
+      "text": "The quick brown fox jumps over the lazy dog multiple times",
+      "length": 58,
+      "detected": true,
+      "detected_text": "The quick brown fox jumps over the lazy dog multiple times",
+      "match_type": "exact",
+      "distance": 268.59123217260833,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 763.7221813201904
+    },
+    {
+      "text": "This is a super extremely long string that tests OCR limits",
+      "length": 59,
+      "detected": true,
+      "detected_text": "This is a super extremely long string that tests OCR limits",
+      "match_type": "exact",
+      "distance": 259.09457732650446,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 762.8250122070312
+    },
+    {
+      "text": "http://www.example.com/very/long/url/path/to/resource/file",
+      "length": 58,
+      "detected": true,
+      "detected_text": "http://www.example.com/very/long/url/path/to/resource/file",
+      "match_type": "exact",
+      "distance": 267.1198233003309,
+      "tolerance": 1000.0,
+      "success": true,
+      "ocr_time_ms": 811.8388652801514
+    }
+  ]
+}

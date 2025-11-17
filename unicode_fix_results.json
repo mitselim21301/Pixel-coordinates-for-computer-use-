@@ -1,0 +1,89 @@
+{
+  "test_type": "Unicode with Chinese PaddleOCR",
+  "total_tests": 10,
+  "successful": 7,
+  "failed": 3,
+  "accuracy": 70.0,
+  "results": [
+    {
+      "text": "\u4f60\u597d",
+      "detected": true,
+      "detected_text": "\u4f60\u597d",
+      "distance": 40.844216236818646,
+      "success": true,
+      "ocr_time_ms": 1471.6989994049072
+    },
+    {
+      "text": "\u3053\u3093\u306b\u3061\u306f",
+      "detected": true,
+      "detected_text": "\u3053\u3093\u306b\u3061\u306f",
+      "distance": 84.74963126763443,
+      "success": true,
+      "ocr_time_ms": 430.8643341064453
+    },
+    {
+      "text": "\uc548\ub155\ud558\uc138\uc694",
+      "detected": true,
+      "detected_text": null,
+      "distance": 77.79781487933964,
+      "success": true,
+      "ocr_time_ms": 464.6477699279785
+    },
+    {
+      "text": "\u041f\u0440\u0438\u0432\u0435\u0442",
+      "detected": false,
+      "detected_text": null,
+      "distance": null,
+      "success": false,
+      "ocr_time_ms": 443.0818557739258
+    },
+    {
+      "text": "\u0645\u0631\u062d\u0628\u0627",
+      "detected": true,
+      "detected_text": null,
+      "distance": 83.01355311032049,
+      "success": true,
+      "ocr_time_ms": 438.83371353149414
+    },
+    {
+      "text": "\u05e9\u05dc\u05d5\u05dd",
+      "detected": true,
+      "detected_text": null,
+      "distance": 68.15423684555495,
+      "success": true,
+      "ocr_time_ms": 435.4836940765381
+    },
+    {
+      "text": "\u0393\u03b5\u03b9\u03b1",
+      "detected": true,
+      "detected_text": "\u03b5",
+      "distance": 39.51028347152169,
+      "success": true,
+      "ocr_time_ms": 448.2288360595703
+    },
+    {
+      "text": "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439",
+      "detected": false,
+      "detected_text": null,
+      "distance": null,
+      "success": false,
+      "ocr_time_ms": 434.5283508300781
+    },
+    {
+      "text": "\u65e5\u672c\u8a9e",
+      "detected": true,
+      "detected_text": "\u65e5\u672c\u8a9e",
+      "distance": 55.14809606867675,
+      "success": true,
+      "ocr_time_ms": 455.045223236084
+    },
+    {
+      "text": "\ud55c\uad6d\uc5b4",
+      "detected": false,
+      "detected_text": null,
+      "distance": null,
+      "success": false,
+      "ocr_time_ms": 473.6058712005615
+    }
+  ]
+}
