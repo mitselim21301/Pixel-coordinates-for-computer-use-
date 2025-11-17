@@ -1,0 +1,4822 @@
+{
+  "metadata": {
+    "test_name": "200 Linux Click Tests",
+    "timestamp": "2025-11-17T09:24:02.454894",
+    "total_tests": 200,
+    "calibration_points": 50
+  },
+  "summary": {
+    "total": 200,
+    "successful": 200,
+    "failed": 0,
+    "success_rate": 1.0,
+    "mean_error": 0.7111114102568865,
+    "median_error": 0.6656278351720571,
+    "std_error": 0.36369701122912834,
+    "max_error": 1.698738275316566
+  },
+  "test_cases": [
+    {
+      "test_id": 1,
+      "category": "desktop_elements",
+      "description": "Menu Bar #1",
+      "target_x": 100.0,
+      "target_y": 30.0,
+      "element_type": "menu_item",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 2,
+      "category": "desktop_elements",
+      "description": "File Menu #2",
+      "target_x": 50.0,
+      "target_y": 80.0,
+      "element_type": "menu_dropdown",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 3,
+      "category": "desktop_elements",
+      "description": "Edit Menu #3",
+      "target_x": 100.0,
+      "target_y": 130.0,
+      "element_type": "menu_dropdown",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 4,
+      "category": "desktop_elements",
+      "description": "Toolbar Button #4",
+      "target_x": 150.0,
+      "target_y": 230.0,
+      "element_type": "toolbar_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 5,
+      "category": "desktop_elements",
+      "description": "Close Button #5",
+      "target_x": 1890.0,
+      "target_y": 230.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 6,
+      "category": "desktop_elements",
+      "description": "Minimize Button #6",
+      "target_x": 1830.0,
+      "target_y": 280.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 7,
+      "category": "desktop_elements",
+      "description": "Maximize Button #7",
+      "target_x": 1860.0,
+      "target_y": 330.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 8,
+      "category": "desktop_elements",
+      "description": "Dialog OK #8",
+      "target_x": 800.0,
+      "target_y": 950.0,
+      "element_type": "dialog_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 9,
+      "category": "desktop_elements",
+      "description": "Dialog Cancel #9",
+      "target_x": 900.0,
+      "target_y": 1000.0,
+      "element_type": "dialog_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 10,
+      "category": "desktop_elements",
+      "description": "Checkbox #10",
+      "target_x": 200.0,
+      "target_y": 850.0,
+      "element_type": "checkbox",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 11,
+      "category": "desktop_elements",
+      "description": "Menu Bar #11",
+      "target_x": 200.0,
+      "target_y": 30.0,
+      "element_type": "menu_item",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 12,
+      "category": "desktop_elements",
+      "description": "File Menu #12",
+      "target_x": 150.0,
+      "target_y": 80.0,
+      "element_type": "menu_dropdown",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 13,
+      "category": "desktop_elements",
+      "description": "Edit Menu #13",
+      "target_x": 200.0,
+      "target_y": 130.0,
+      "element_type": "menu_dropdown",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 14,
+      "category": "desktop_elements",
+      "description": "Toolbar Button #14",
+      "target_x": 250.0,
+      "target_y": 230.0,
+      "element_type": "toolbar_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 15,
+      "category": "desktop_elements",
+      "description": "Close Button #15",
+      "target_x": 1990.0,
+      "target_y": 230.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 16,
+      "category": "desktop_elements",
+      "description": "Minimize Button #16",
+      "target_x": 1930.0,
+      "target_y": 280.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 17,
+      "category": "desktop_elements",
+      "description": "Maximize Button #17",
+      "target_x": 1960.0,
+      "target_y": 330.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 18,
+      "category": "desktop_elements",
+      "description": "Dialog OK #18",
+      "target_x": 900.0,
+      "target_y": 950.0,
+      "element_type": "dialog_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 19,
+      "category": "desktop_elements",
+      "description": "Dialog Cancel #19",
+      "target_x": 1000.0,
+      "target_y": 1000.0,
+      "element_type": "dialog_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 20,
+      "category": "desktop_elements",
+      "description": "Checkbox #20",
+      "target_x": 300.0,
+      "target_y": 850.0,
+      "element_type": "checkbox",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 21,
+      "category": "desktop_elements",
+      "description": "Menu Bar #21",
+      "target_x": 300.0,
+      "target_y": 30.0,
+      "element_type": "menu_item",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 22,
+      "category": "desktop_elements",
+      "description": "File Menu #22",
+      "target_x": 250.0,
+      "target_y": 80.0,
+      "element_type": "menu_dropdown",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 23,
+      "category": "desktop_elements",
+      "description": "Edit Menu #23",
+      "target_x": 300.0,
+      "target_y": 130.0,
+      "element_type": "menu_dropdown",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 24,
+      "category": "desktop_elements",
+      "description": "Toolbar Button #24",
+      "target_x": 350.0,
+      "target_y": 230.0,
+      "element_type": "toolbar_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 25,
+      "category": "desktop_elements",
+      "description": "Close Button #25",
+      "target_x": 2090.0,
+      "target_y": 230.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 26,
+      "category": "desktop_elements",
+      "description": "Minimize Button #26",
+      "target_x": 2030.0,
+      "target_y": 280.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 27,
+      "category": "desktop_elements",
+      "description": "Maximize Button #27",
+      "target_x": 2060.0,
+      "target_y": 330.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 28,
+      "category": "desktop_elements",
+      "description": "Dialog OK #28",
+      "target_x": 1000.0,
+      "target_y": 950.0,
+      "element_type": "dialog_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 29,
+      "category": "desktop_elements",
+      "description": "Dialog Cancel #29",
+      "target_x": 1100.0,
+      "target_y": 1000.0,
+      "element_type": "dialog_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 30,
+      "category": "desktop_elements",
+      "description": "Checkbox #30",
+      "target_x": 400.0,
+      "target_y": 850.0,
+      "element_type": "checkbox",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 31,
+      "category": "desktop_elements",
+      "description": "Menu Bar #31",
+      "target_x": 400.0,
+      "target_y": 30.0,
+      "element_type": "menu_item",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 32,
+      "category": "desktop_elements",
+      "description": "File Menu #32",
+      "target_x": 350.0,
+      "target_y": 80.0,
+      "element_type": "menu_dropdown",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 33,
+      "category": "desktop_elements",
+      "description": "Edit Menu #33",
+      "target_x": 400.0,
+      "target_y": 130.0,
+      "element_type": "menu_dropdown",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 34,
+      "category": "desktop_elements",
+      "description": "Toolbar Button #34",
+      "target_x": 450.0,
+      "target_y": 230.0,
+      "element_type": "toolbar_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 35,
+      "category": "desktop_elements",
+      "description": "Close Button #35",
+      "target_x": 2190.0,
+      "target_y": 230.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 36,
+      "category": "desktop_elements",
+      "description": "Minimize Button #36",
+      "target_x": 2130.0,
+      "target_y": 280.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 37,
+      "category": "desktop_elements",
+      "description": "Maximize Button #37",
+      "target_x": 2160.0,
+      "target_y": 330.0,
+      "element_type": "window_control",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 38,
+      "category": "desktop_elements",
+      "description": "Dialog OK #38",
+      "target_x": 1100.0,
+      "target_y": 950.0,
+      "element_type": "dialog_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 39,
+      "category": "desktop_elements",
+      "description": "Dialog Cancel #39",
+      "target_x": 1200.0,
+      "target_y": 1000.0,
+      "element_type": "dialog_button",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 40,
+      "category": "desktop_elements",
+      "description": "Checkbox #40",
+      "target_x": 500.0,
+      "target_y": 850.0,
+      "element_type": "checkbox",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 41,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 1",
+      "target_x": 744.2090044174635,
+      "target_y": 936.6285896407262,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 42,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 2",
+      "target_x": 3279.0295799156165,
+      "target_y": 626.8194660933922,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 43,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 3",
+      "target_x": 368.3520615609908,
+      "target_y": 68.80109593275947,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 44,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 4",
+      "target_x": 199.90381292930306,
+      "target_y": 862.235008281943,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 45,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 5",
+      "target_x": 3053.917820198319,
+      "target_y": 723.1038684605201,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 46,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 6",
+      "target_x": 135.40533018878023,
+      "target_y": -93.98197043239887,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 47,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 7",
+      "target_x": 1531.8013421767255,
+      "target_y": 286.85841739688306,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 48,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 8",
+      "target_x": 2332.738943596213,
+      "target_y": 261.39596867102176,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 49,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 9",
+      "target_x": 623.2966578904048,
+      "target_y": -4.951286326447573,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 50,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 10",
+      "target_x": 842.9454320644392,
+      "target_y": 356.2816433742769,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 51,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 11",
+      "target_x": 3072.3869789224927,
+      "target_y": 222.7545973737968,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 52,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 12",
+      "target_x": 602.4887954805752,
+      "target_y": 26.727631341261656,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 53,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 13",
+      "target_x": 884.4403728533018,
+      "target_y": 790.954846025852,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 54,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 14",
+      "target_x": 2363.4389053123787,
+      "target_y": 552.5263058039782,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 55,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 15",
+      "target_x": 1118.953058442713,
+      "target_y": 90.70991745600045,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 56,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 16",
+      "target_x": 1144.977145270474,
+      "target_y": 250.06122884481655,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 57,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 17",
+      "target_x": 2131.888739934681,
+      "target_y": 935.0192727829333,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 58,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 18",
+      "target_x": 1760.887096888242,
+      "target_y": -61.67946962329222,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 59,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 19",
+      "target_x": 623.9356829781976,
+      "target_y": 185.9514603256178,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 60,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 20",
+      "target_x": 3196.8808056009098,
+      "target_y": 487.33419449084914,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 61,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 21",
+      "target_x": 309.90576393301956,
+      "target_y": 0.9646179777459594,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 62,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 22",
+      "target_x": 159.14825631817564,
+      "target_y": 900.2019538293282,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 63,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 23",
+      "target_x": 2465.101568352029,
+      "target_y": 683.0196102315041,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 64,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 24",
+      "target_x": 636.1430508737868,
+      "target_y": -4.0136042355621555,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 65,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 25",
+      "target_x": 1040.3416804704411,
+      "target_y": 262.6719208624638,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 66,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 26",
+      "target_x": 3687.6855597550407,
+      "target_y": 782.1168845577808,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 67,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 27",
+      "target_x": 1715.9381794904052,
+      "target_y": -78.96547008552977,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 68,
+      "category": "multi_monitor",
+      "description": "Primary Left - Position 28",
+      "target_x": 1128.3879635550663,
+      "target_y": 911.2493268203428,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 69,
+      "category": "multi_monitor",
+      "description": "Primary Right - Position 29",
+      "target_x": 2172.2071035293015,
+      "target_y": 272.46491892884774,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 70,
+      "category": "multi_monitor",
+      "description": "Vertical Top - Position 30",
+      "target_x": 177.79093692612548,
+      "target_y": 34.933933847347134,
+      "element_type": "window_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        3840,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 71,
+      "category": "window_managers",
+      "description": "GNOME Window Element",
+      "target_x": 790.7894803280127,
+      "target_y": 338.7871479610284,
+      "element_type": "window_client_area",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 72,
+      "category": "window_managers",
+      "description": "KDE Plasma Window Element",
+      "target_x": 1459.6810139109325,
+      "target_y": 413.94292749035856,
+      "element_type": "window_client_area",
+      "window_manager": "KDE Plasma",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 73,
+      "category": "window_managers",
+      "description": "XFCE Window Element",
+      "target_x": 627.0204547248188,
+      "target_y": 577.5725531792586,
+      "element_type": "window_client_area",
+      "window_manager": "XFCE",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 74,
+      "category": "window_managers",
+      "description": "i3wm Window Element",
+      "target_x": 414.20482196163925,
+      "target_y": 805.933343063555,
+      "element_type": "window_client_area",
+      "window_manager": "i3wm",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 75,
+      "category": "window_managers",
+      "description": "Cinnamon Window Element",
+      "target_x": 313.31697839325165,
+      "target_y": 968.4605042084552,
+      "element_type": "window_client_area",
+      "window_manager": "Cinnamon",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 76,
+      "category": "window_managers",
+      "description": "GNOME Window Element",
+      "target_x": 1373.8120493309193,
+      "target_y": 274.8697997500717,
+      "element_type": "window_client_area",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 77,
+      "category": "window_managers",
+      "description": "KDE Plasma Window Element",
+      "target_x": 208.39361802787565,
+      "target_y": 817.6060570402541,
+      "element_type": "window_client_area",
+      "window_manager": "KDE Plasma",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 78,
+      "category": "window_managers",
+      "description": "XFCE Window Element",
+      "target_x": 1274.423162648378,
+      "target_y": 741.5263078760688,
+      "element_type": "window_client_area",
+      "window_manager": "XFCE",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 79,
+      "category": "window_managers",
+      "description": "i3wm Window Element",
+      "target_x": 1372.3309269626375,
+      "target_y": 165.15929352599952,
+      "element_type": "window_client_area",
+      "window_manager": "i3wm",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 80,
+      "category": "window_managers",
+      "description": "Cinnamon Window Element",
+      "target_x": 744.8679073872944,
+      "target_y": 201.96477238211415,
+      "element_type": "window_client_area",
+      "window_manager": "Cinnamon",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 81,
+      "category": "window_managers",
+      "description": "GNOME Window Element",
+      "target_x": 1511.917207330902,
+      "target_y": 648.5023516082509,
+      "element_type": "window_client_area",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 82,
+      "category": "window_managers",
+      "description": "KDE Plasma Window Element",
+      "target_x": 702.9649977760267,
+      "target_y": 155.9313482517008,
+      "element_type": "window_client_area",
+      "window_manager": "KDE Plasma",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 83,
+      "category": "window_managers",
+      "description": "XFCE Window Element",
+      "target_x": 672.6931290078065,
+      "target_y": 386.1613233835374,
+      "element_type": "window_client_area",
+      "window_manager": "XFCE",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 84,
+      "category": "window_managers",
+      "description": "i3wm Window Element",
+      "target_x": 1309.0013910738573,
+      "target_y": 661.0505747925876,
+      "element_type": "window_client_area",
+      "window_manager": "i3wm",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 85,
+      "category": "window_managers",
+      "description": "Cinnamon Window Element",
+      "target_x": 1548.5633687160164,
+      "target_y": 515.5491341425154,
+      "element_type": "window_client_area",
+      "window_manager": "Cinnamon",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 86,
+      "category": "window_managers",
+      "description": "GNOME Window Element",
+      "target_x": 381.7832538262186,
+      "target_y": 727.6554127562356,
+      "element_type": "window_client_area",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 87,
+      "category": "window_managers",
+      "description": "KDE Plasma Window Element",
+      "target_x": 1356.3932738976841,
+      "target_y": 593.9239338611567,
+      "element_type": "window_client_area",
+      "window_manager": "KDE Plasma",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 88,
+      "category": "window_managers",
+      "description": "XFCE Window Element",
+      "target_x": 1371.8701135309327,
+      "target_y": 534.5401248006639,
+      "element_type": "window_client_area",
+      "window_manager": "XFCE",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 89,
+      "category": "window_managers",
+      "description": "i3wm Window Element",
+      "target_x": 994.5539006606309,
+      "target_y": 476.2360961555237,
+      "element_type": "window_client_area",
+      "window_manager": "i3wm",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 90,
+      "category": "window_managers",
+      "description": "Cinnamon Window Element",
+      "target_x": 238.63707265102468,
+      "target_y": 194.94445575410793,
+      "element_type": "window_client_area",
+      "window_manager": "Cinnamon",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 91,
+      "category": "window_managers",
+      "description": "GNOME Window Element",
+      "target_x": 247.77236224383606,
+      "target_y": 660.0411619121268,
+      "element_type": "window_client_area",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 92,
+      "category": "window_managers",
+      "description": "KDE Plasma Window Element",
+      "target_x": 677.8210912360166,
+      "target_y": 547.5422082249385,
+      "element_type": "window_client_area",
+      "window_manager": "KDE Plasma",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 93,
+      "category": "window_managers",
+      "description": "XFCE Window Element",
+      "target_x": 1579.5010403676613,
+      "target_y": 319.37716165100994,
+      "element_type": "window_client_area",
+      "window_manager": "XFCE",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 94,
+      "category": "window_managers",
+      "description": "i3wm Window Element",
+      "target_x": 823.7820430141572,
+      "target_y": 764.8850019178828,
+      "element_type": "window_client_area",
+      "window_manager": "i3wm",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 95,
+      "category": "window_managers",
+      "description": "Cinnamon Window Element",
+      "target_x": 547.7732115472661,
+      "target_y": 167.74232064933784,
+      "element_type": "window_client_area",
+      "window_manager": "Cinnamon",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 96,
+      "category": "window_managers",
+      "description": "GNOME Window Element",
+      "target_x": 640.4222084289274,
+      "target_y": 241.87473278352388,
+      "element_type": "window_client_area",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 97,
+      "category": "window_managers",
+      "description": "KDE Plasma Window Element",
+      "target_x": 1613.140431560711,
+      "target_y": 811.145934016687,
+      "element_type": "window_client_area",
+      "window_manager": "KDE Plasma",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 98,
+      "category": "window_managers",
+      "description": "XFCE Window Element",
+      "target_x": 1162.7737098958437,
+      "target_y": 866.8853193651915,
+      "element_type": "window_client_area",
+      "window_manager": "XFCE",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 99,
+      "category": "window_managers",
+      "description": "i3wm Window Element",
+      "target_x": 1421.581556886654,
+      "target_y": 264.18165181971153,
+      "element_type": "window_client_area",
+      "window_manager": "i3wm",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 100,
+      "category": "window_managers",
+      "description": "Cinnamon Window Element",
+      "target_x": 1556.6896777047662,
+      "target_y": 574.6211728857727,
+      "element_type": "window_client_area",
+      "window_manager": "Cinnamon",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 101,
+      "category": "edge_cases",
+      "description": "Top-Left Corner Variation 1",
+      "target_x": 72.2976062065625,
+      "target_y": 75.84365199693973,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 102,
+      "category": "edge_cases",
+      "description": "Top-Right Corner Variation 2",
+      "target_x": 1852.7201389988745,
+      "target_y": 44.40207698110707,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 103,
+      "category": "edge_cases",
+      "description": "Bottom-Left Corner Variation 3",
+      "target_x": 49.117406501677664,
+      "target_y": 1017.0843115450502,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 104,
+      "category": "edge_cases",
+      "description": "Bottom-Right Corner Variation 4",
+      "target_x": 1872.7205906368997,
+      "target_y": 1034.4292233302538,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 105,
+      "category": "edge_cases",
+      "description": "Left Edge Center Variation 5",
+      "target_x": 40.27808522124763,
+      "target_y": 540.4298921031026,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 106,
+      "category": "edge_cases",
+      "description": "Right Edge Center Variation 6",
+      "target_x": 1856.696440125951,
+      "target_y": 528.8843124188293,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 107,
+      "category": "edge_cases",
+      "description": "Top Edge Center Variation 7",
+      "target_x": 944.7946146933473,
+      "target_y": 53.50460685614512,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 108,
+      "category": "edge_cases",
+      "description": "Bottom Edge Center Variation 8",
+      "target_x": 977.7163881565008,
+      "target_y": 1012.9281172808302,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 109,
+      "category": "edge_cases",
+      "description": "Top-Left Corner Variation 9",
+      "target_x": 60.75162486973464,
+      "target_y": 68.12075835580711,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 110,
+      "category": "edge_cases",
+      "description": "Top-Right Corner Variation 10",
+      "target_x": 1854.5451840951719,
+      "target_y": 78.87128330883843,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 111,
+      "category": "edge_cases",
+      "description": "Bottom-Left Corner Variation 11",
+      "target_x": 78.49789179768445,
+      "target_y": 1010.0712918330146,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 112,
+      "category": "edge_cases",
+      "description": "Bottom-Right Corner Variation 12",
+      "target_x": 1859.8899402356953,
+      "target_y": 1012.0351323926708,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 113,
+      "category": "edge_cases",
+      "description": "Left Edge Center Variation 13",
+      "target_x": 51.393619775098706,
+      "target_y": 521.4754778941813,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 114,
+      "category": "edge_cases",
+      "description": "Right Edge Center Variation 14",
+      "target_x": 1864.382573359196,
+      "target_y": 540.1071609291545,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 115,
+      "category": "edge_cases",
+      "description": "Top Edge Center Variation 15",
+      "target_x": 942.0591500499995,
+      "target_y": 51.14585856946446,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 116,
+      "category": "edge_cases",
+      "description": "Bottom Edge Center Variation 16",
+      "target_x": 976.3306354386661,
+      "target_y": 1009.5824756266788,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 117,
+      "category": "edge_cases",
+      "description": "Top-Left Corner Variation 17",
+      "target_x": 45.795794883648924,
+      "target_y": 59.57811041110252,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 118,
+      "category": "edge_cases",
+      "description": "Top-Right Corner Variation 18",
+      "target_x": 1879.426018164424,
+      "target_y": 49.68221086046002,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 119,
+      "category": "edge_cases",
+      "description": "Bottom-Left Corner Variation 19",
+      "target_x": 66.88542189623514,
+      "target_y": 1030.4647846131486,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 120,
+      "category": "edge_cases",
+      "description": "Bottom-Right Corner Variation 20",
+      "target_x": 1849.505501759696,
+      "target_y": 1029.1286539444743,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 121,
+      "category": "edge_cases",
+      "description": "Left Edge Center Variation 21",
+      "target_x": 54.71132530877013,
+      "target_y": 545.2922332237432,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 122,
+      "category": "edge_cases",
+      "description": "Right Edge Center Variation 22",
+      "target_x": 1865.3411884304357,
+      "target_y": 541.4309873629903,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 123,
+      "category": "edge_cases",
+      "description": "Top Edge Center Variation 23",
+      "target_x": 943.6115908021764,
+      "target_y": 73.41209982356952,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 124,
+      "category": "edge_cases",
+      "description": "Bottom Edge Center Variation 24",
+      "target_x": 952.8312025988695,
+      "target_y": 1007.4607404159942,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 125,
+      "category": "edge_cases",
+      "description": "Top-Left Corner Variation 25",
+      "target_x": 41.63100566219056,
+      "target_y": 63.63571772752967,
+      "element_type": "edge_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 126,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.0x - Test 1",
+      "target_x": 1265.4107023687257,
+      "target_y": 114.59728945651341,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 127,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.25x - Test 2",
+      "target_x": 980.8000602747633,
+      "target_y": 299.3162821741854,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.25,
+      "expected_accuracy_px": 2.5
+    },
+    {
+      "test_id": 128,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.5x - Test 3",
+      "target_x": 1209.6971995042538,
+      "target_y": 253.44245752439247,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.5,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 129,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.75x - Test 4",
+      "target_x": 1288.4129095362414,
+      "target_y": 440.32710474447293,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.75,
+      "expected_accuracy_px": 3.5
+    },
+    {
+      "test_id": 130,
+      "category": "hidpi_scaling",
+      "description": "Scale 2.0x - Test 5",
+      "target_x": 1711.1755806271833,
+      "target_y": 221.01843084847405,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 2.0,
+      "expected_accuracy_px": 4.0
+    },
+    {
+      "test_id": 131,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.0x - Test 6",
+      "target_x": 686.6341238064447,
+      "target_y": 199.85669869171838,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 132,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.25x - Test 7",
+      "target_x": 1690.473023439128,
+      "target_y": 872.0586309752633,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.25,
+      "expected_accuracy_px": 2.5
+    },
+    {
+      "test_id": 133,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.5x - Test 8",
+      "target_x": 543.6595996700676,
+      "target_y": 680.7859605100775,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.5,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 134,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.75x - Test 9",
+      "target_x": 1505.6221843460912,
+      "target_y": 588.5767142075268,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.75,
+      "expected_accuracy_px": 3.5
+    },
+    {
+      "test_id": 135,
+      "category": "hidpi_scaling",
+      "description": "Scale 2.0x - Test 10",
+      "target_x": 1010.9989947723311,
+      "target_y": 312.8300159923975,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 2.0,
+      "expected_accuracy_px": 4.0
+    },
+    {
+      "test_id": 136,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.0x - Test 11",
+      "target_x": 260.1367606261466,
+      "target_y": 889.5498669989275,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 137,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.25x - Test 12",
+      "target_x": 1648.7190583209283,
+      "target_y": 657.1292824004757,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.25,
+      "expected_accuracy_px": 2.5
+    },
+    {
+      "test_id": 138,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.5x - Test 13",
+      "target_x": 683.1312406037651,
+      "target_y": 407.3044256591416,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.5,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 139,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.75x - Test 14",
+      "target_x": 1348.6437676568116,
+      "target_y": 889.4570287582678,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.75,
+      "expected_accuracy_px": 3.5
+    },
+    {
+      "test_id": 140,
+      "category": "hidpi_scaling",
+      "description": "Scale 2.0x - Test 15",
+      "target_x": 1625.7886497360018,
+      "target_y": 786.290480354709,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 2.0,
+      "expected_accuracy_px": 4.0
+    },
+    {
+      "test_id": 141,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.0x - Test 16",
+      "target_x": 1204.294431385375,
+      "target_y": 174.04316919564297,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 142,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.25x - Test 17",
+      "target_x": 378.0013882427357,
+      "target_y": 890.7276859038298,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.25,
+      "expected_accuracy_px": 2.5
+    },
+    {
+      "test_id": 143,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.5x - Test 18",
+      "target_x": 1143.0579826144947,
+      "target_y": 108.09340542263409,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.5,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 144,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.75x - Test 19",
+      "target_x": 274.5310537295752,
+      "target_y": 683.8815568150891,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.75,
+      "expected_accuracy_px": 3.5
+    },
+    {
+      "test_id": 145,
+      "category": "hidpi_scaling",
+      "description": "Scale 2.0x - Test 20",
+      "target_x": 108.70592421549614,
+      "target_y": 241.51108524739882,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 2.0,
+      "expected_accuracy_px": 4.0
+    },
+    {
+      "test_id": 146,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.0x - Test 21",
+      "target_x": 1043.8221177105281,
+      "target_y": 708.8677739695701,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 147,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.25x - Test 22",
+      "target_x": 1221.373366344473,
+      "target_y": 297.3569923252926,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.25,
+      "expected_accuracy_px": 2.5
+    },
+    {
+      "test_id": 148,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.5x - Test 23",
+      "target_x": 1324.9482607177617,
+      "target_y": 308.77919699718404,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.5,
+      "expected_accuracy_px": 3.0
+    },
+    {
+      "test_id": 149,
+      "category": "hidpi_scaling",
+      "description": "Scale 1.75x - Test 24",
+      "target_x": 659.6874808339405,
+      "target_y": 756.9124365038613,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.75,
+      "expected_accuracy_px": 3.5
+    },
+    {
+      "test_id": 150,
+      "category": "hidpi_scaling",
+      "description": "Scale 2.0x - Test 25",
+      "target_x": 1217.3685863612093,
+      "target_y": 847.3166012348765,
+      "element_type": "scaled_element",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 2.0,
+      "expected_accuracy_px": 4.0
+    },
+    {
+      "test_id": 151,
+      "category": "small_elements",
+      "description": "System Tray Icon 16px #1",
+      "target_x": 1850.0,
+      "target_y": 15.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 152,
+      "category": "small_elements",
+      "description": "Checkbox 12px #2",
+      "target_x": 300.0,
+      "target_y": 440.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 153,
+      "category": "small_elements",
+      "description": "Radio Button 12px #3",
+      "target_x": 350.0,
+      "target_y": 530.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 154,
+      "category": "small_elements",
+      "description": "Close Button 20px #4",
+      "target_x": 1890.0,
+      "target_y": 155.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 155,
+      "category": "small_elements",
+      "description": "Dropdown Arrow 14px #5",
+      "target_x": 800.0,
+      "target_y": 360.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 156,
+      "category": "small_elements",
+      "description": "System Tray Icon 16px #6",
+      "target_x": 1880.0,
+      "target_y": 15.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 157,
+      "category": "small_elements",
+      "description": "Checkbox 12px #7",
+      "target_x": 330.0,
+      "target_y": 440.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 158,
+      "category": "small_elements",
+      "description": "Radio Button 12px #8",
+      "target_x": 380.0,
+      "target_y": 530.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 159,
+      "category": "small_elements",
+      "description": "Close Button 20px #9",
+      "target_x": 1920.0,
+      "target_y": 155.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 160,
+      "category": "small_elements",
+      "description": "Dropdown Arrow 14px #10",
+      "target_x": 830.0,
+      "target_y": 360.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 161,
+      "category": "small_elements",
+      "description": "System Tray Icon 16px #11",
+      "target_x": 1910.0,
+      "target_y": 15.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 162,
+      "category": "small_elements",
+      "description": "Checkbox 12px #12",
+      "target_x": 360.0,
+      "target_y": 440.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 163,
+      "category": "small_elements",
+      "description": "Radio Button 12px #13",
+      "target_x": 410.0,
+      "target_y": 530.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 164,
+      "category": "small_elements",
+      "description": "Close Button 20px #14",
+      "target_x": 1950.0,
+      "target_y": 155.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 165,
+      "category": "small_elements",
+      "description": "Dropdown Arrow 14px #15",
+      "target_x": 860.0,
+      "target_y": 360.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 166,
+      "category": "small_elements",
+      "description": "System Tray Icon 16px #16",
+      "target_x": 1940.0,
+      "target_y": 15.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 167,
+      "category": "small_elements",
+      "description": "Checkbox 12px #17",
+      "target_x": 390.0,
+      "target_y": 440.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 168,
+      "category": "small_elements",
+      "description": "Radio Button 12px #18",
+      "target_x": 440.0,
+      "target_y": 530.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 169,
+      "category": "small_elements",
+      "description": "Close Button 20px #19",
+      "target_x": 1980.0,
+      "target_y": 155.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 170,
+      "category": "small_elements",
+      "description": "Dropdown Arrow 14px #20",
+      "target_x": 890.0,
+      "target_y": 360.0,
+      "element_type": "small_ui",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 171,
+      "category": "dynamic_windows",
+      "description": "Small Window - Click 1",
+      "target_x": 447.283867690103,
+      "target_y": 313.6617206670943,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 172,
+      "category": "dynamic_windows",
+      "description": "Medium Window - Click 2",
+      "target_x": 675.5723374796647,
+      "target_y": 473.85790152971674,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 173,
+      "category": "dynamic_windows",
+      "description": "Large Window - Click 3",
+      "target_x": 654.7630779862432,
+      "target_y": 335.1917147032668,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 174,
+      "category": "dynamic_windows",
+      "description": "Maximized Window - Click 4",
+      "target_x": 1820.879209649451,
+      "target_y": 435.2357701734252,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 175,
+      "category": "dynamic_windows",
+      "description": "Small Window - Click 5",
+      "target_x": 517.613966553134,
+      "target_y": 326.2277251994526,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 176,
+      "category": "dynamic_windows",
+      "description": "Medium Window - Click 6",
+      "target_x": 1166.3679124791538,
+      "target_y": 541.318546552596,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 177,
+      "category": "dynamic_windows",
+      "description": "Large Window - Click 7",
+      "target_x": 1059.9750500142668,
+      "target_y": 534.0141550550911,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 178,
+      "category": "dynamic_windows",
+      "description": "Maximized Window - Click 8",
+      "target_x": 405.342237792441,
+      "target_y": 758.0030729562752,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 179,
+      "category": "dynamic_windows",
+      "description": "Small Window - Click 9",
+      "target_x": 334.2317087322567,
+      "target_y": 204.86319328629077,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 180,
+      "category": "dynamic_windows",
+      "description": "Medium Window - Click 10",
+      "target_x": 1061.8306071350175,
+      "target_y": 378.55533970352445,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 181,
+      "category": "dynamic_windows",
+      "description": "Large Window - Click 11",
+      "target_x": 1532.5961596587886,
+      "target_y": 903.1428616020698,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 182,
+      "category": "dynamic_windows",
+      "description": "Maximized Window - Click 12",
+      "target_x": 1715.0531902012162,
+      "target_y": 412.7555262503355,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 183,
+      "category": "dynamic_windows",
+      "description": "Small Window - Click 13",
+      "target_x": 254.63698495866024,
+      "target_y": 385.66371251754504,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 184,
+      "category": "dynamic_windows",
+      "description": "Medium Window - Click 14",
+      "target_x": 909.72890382212,
+      "target_y": 773.3274095218349,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 185,
+      "category": "dynamic_windows",
+      "description": "Large Window - Click 15",
+      "target_x": 1562.7059702160286,
+      "target_y": 822.407564373888,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 186,
+      "category": "dynamic_windows",
+      "description": "Maximized Window - Click 16",
+      "target_x": 585.896983566646,
+      "target_y": 427.39577402988675,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 187,
+      "category": "dynamic_windows",
+      "description": "Small Window - Click 17",
+      "target_x": 505.34100145505704,
+      "target_y": 263.38440103125555,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 188,
+      "category": "dynamic_windows",
+      "description": "Medium Window - Click 18",
+      "target_x": 728.6449226802647,
+      "target_y": 568.4006312291751,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 189,
+      "category": "dynamic_windows",
+      "description": "Large Window - Click 19",
+      "target_x": 1527.0012064090154,
+      "target_y": 696.8238373399784,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 190,
+      "category": "dynamic_windows",
+      "description": "Maximized Window - Click 20",
+      "target_x": 1087.5113295626443,
+      "target_y": 145.23296389535318,
+      "element_type": "window_content",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 191,
+      "category": "random_stress",
+      "description": "Random Position 1",
+      "target_x": 1157.812429922572,
+      "target_y": 971.2473880917516,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 192,
+      "category": "random_stress",
+      "description": "Random Position 2",
+      "target_x": 340.9445062068213,
+      "target_y": 556.1300940800884,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 193,
+      "category": "random_stress",
+      "description": "Random Position 3",
+      "target_x": 1609.0816837160833,
+      "target_y": 751.8763836236999,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 194,
+      "category": "random_stress",
+      "description": "Random Position 4",
+      "target_x": 1298.867074511861,
+      "target_y": 718.1859939086562,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 195,
+      "category": "random_stress",
+      "description": "Random Position 5",
+      "target_x": 718.3247800979789,
+      "target_y": 358.3608229527542,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 196,
+      "category": "random_stress",
+      "description": "Random Position 6",
+      "target_x": 1492.1011874230435,
+      "target_y": 812.899787317679,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 197,
+      "category": "random_stress",
+      "description": "Random Position 7",
+      "target_x": 1591.3643879577783,
+      "target_y": 903.6516862496948,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 198,
+      "category": "random_stress",
+      "description": "Random Position 8",
+      "target_x": 979.508926040813,
+      "target_y": 541.3343393247357,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 199,
+      "category": "random_stress",
+      "description": "Random Position 9",
+      "target_x": 1473.0677078228532,
+      "target_y": 671.9682590844334,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    },
+    {
+      "test_id": 200,
+      "category": "random_stress",
+      "description": "Random Position 10",
+      "target_x": 1307.3830288832498,
+      "target_y": 800.2975491037689,
+      "element_type": "random",
+      "window_manager": "GNOME",
+      "screen_resolution": [
+        1920,
+        1080
+      ],
+      "dpi_scale": 1.0,
+      "expected_accuracy_px": 2.0
+    }
+  ],
+  "results": [
+    {
+      "test_id": 1,
+      "success": true,
+      "measured_x": 100.54864435414302,
+      "measured_y": 29.715245578688027,
+      "error_px": 0.6181389065491109,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.06556510925292969
+    },
+    {
+      "test_id": 2,
+      "success": true,
+      "measured_x": 48.95772829674634,
+      "measured_y": 80.7179219931366,
+      "error_px": 1.265599577920487,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.016689300537109375
+    },
+    {
+      "test_id": 3,
+      "success": true,
+      "measured_x": 99.83695537285737,
+      "measured_y": 130.654091158931,
+      "error_px": 0.6741059224126349,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.011444091796875
+    },
+    {
+      "test_id": 4,
+      "success": true,
+      "measured_x": 149.02301707540943,
+      "measured_y": 229.64363592472102,
+      "error_px": 1.039947589588527,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.010728836059570312
+    },
+    {
+      "test_id": 5,
+      "success": true,
+      "measured_x": 1889.9028363225914,
+      "measured_y": 229.9991315139162,
+      "error_px": 0.09716755876136549,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.010967254638671875
+    },
+    {
+      "test_id": 6,
+      "success": true,
+      "measured_x": 1829.6524162784328,
+      "measured_y": 280.3158596501367,
+      "error_px": 0.46966132700378654,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.010251998901367188
+    },
+    {
+      "test_id": 7,
+      "success": true,
+      "measured_x": 1859.312761051586,
+      "measured_y": 329.89498347058384,
+      "error_px": 0.6952164006032971,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.020265579223632812
+    },
+    {
+      "test_id": 8,
+      "success": true,
+      "measured_x": 799.966114885188,
+      "measured_y": 950.256233546078,
+      "error_px": 0.2584643711259146,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.014066696166992188
+    },
+    {
+      "test_id": 9,
+      "success": true,
+      "measured_x": 900.2913404706952,
+      "measured_y": 999.3547390368349,
+      "error_px": 0.7079837430687942,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007867813110351562
+    },
+    {
+      "test_id": 10,
+      "success": true,
+      "measured_x": 199.0561894938417,
+      "measured_y": 850.6760144393899,
+      "error_px": 1.1609366019720226,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.00667572021484375
+    },
+    {
+      "test_id": 11,
+      "success": true,
+      "measured_x": 200.08272499433508,
+      "measured_y": 29.561624592239507,
+      "error_px": 0.44611256742768113,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.00667572021484375
+    },
+    {
+      "test_id": 12,
+      "success": true,
+      "measured_x": 150.7530858742837,
+      "measured_y": 80.03691323620669,
+      "error_px": 0.7539900006319002,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 13,
+      "success": true,
+      "measured_x": 200.5485657389814,
+      "measured_y": 130.01042735212118,
+      "error_px": 0.5486648336247539,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 14,
+      "success": true,
+      "measured_x": 251.0333636464314,
+      "measured_y": 230.93872965068937,
+      "error_px": 1.3960851631793114,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 15,
+      "success": true,
+      "measured_x": 1989.7630220060828,
+      "measured_y": 230.5076562103705,
+      "error_px": 0.5602440517566966,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0064373016357421875
+    },
+    {
+      "test_id": 16,
+      "success": true,
+      "measured_x": 1930.2549090600182,
+      "measured_y": 280.72603954398835,
+      "error_px": 0.7694881729527693,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 17,
+      "success": true,
+      "measured_x": 1959.3692443844272,
+      "measured_y": 330.35062049034474,
+      "error_px": 0.7216559947967914,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 18,
+      "success": true,
+      "measured_x": 900.4820857555136,
+      "measured_y": 949.005985469813,
+      "error_px": 1.104749547133622,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0064373016357421875
+    },
+    {
+      "test_id": 19,
+      "success": true,
+      "measured_x": 999.2491601057802,
+      "measured_y": 998.8517144895776,
+      "error_px": 1.371976734568774,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 20,
+      "success": true,
+      "measured_x": 299.7517785288018,
+      "measured_y": 850.3679404280334,
+      "error_px": 0.44384012588454097,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.008344650268554688
+    },
+    {
+      "test_id": 21,
+      "success": true,
+      "measured_x": 300.72624866639916,
+      "measured_y": 30.01404431657649,
+      "error_px": 0.7263844493618076,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 22,
+      "success": true,
+      "measured_x": 250.79569083781053,
+      "measured_y": 79.21423638532742,
+      "error_px": 1.1182791992695416,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 23,
+      "success": true,
+      "measured_x": 298.963091946101,
+      "measured_y": 129.94274095295248,
+      "error_px": 1.0384877999810378,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.01239776611328125
+    },
+    {
+      "test_id": 24,
+      "success": true,
+      "measured_x": 350.11118828466294,
+      "measured_y": 229.95531007589386,
+      "error_px": 0.1198333174159016,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.025987625122070312
+    },
+    {
+      "test_id": 25,
+      "success": true,
+      "measured_x": 2088.7628591327243,
+      "measured_y": 229.92427616561358,
+      "error_px": 1.2394561809833435,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 26,
+      "success": true,
+      "measured_x": 2029.1824940624688,
+      "measured_y": 280.3416120892021,
+      "error_px": 0.8860105966566248,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 27,
+      "success": true,
+      "measured_x": 2060.1015813230993,
+      "measured_y": 329.45635830486555,
+      "error_px": 0.5530506829317342,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.010013580322265625
+    },
+    {
+      "test_id": 28,
+      "success": true,
+      "measured_x": 999.6173254832112,
+      "measured_y": 949.3907247503067,
+      "error_px": 0.719483228218946,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.01049041748046875
+    },
+    {
+      "test_id": 29,
+      "success": true,
+      "measured_x": 1099.865478784246,
+      "measured_y": 1000.4986204636214,
+      "error_px": 0.516447794292799,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.010013580322265625
+    },
+    {
+      "test_id": 30,
+      "success": true,
+      "measured_x": 399.35780296226176,
+      "measured_y": 850.2505177708805,
+      "error_px": 0.689330246548564,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 31,
+      "success": true,
+      "measured_x": 399.6083105976415,
+      "measured_y": 29.537212129601325,
+      "error_px": 0.6062946485893688,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 32,
+      "success": true,
+      "measured_x": 349.8410855897713,
+      "measured_y": 79.40390891001496,
+      "error_px": 0.6169103478933441,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.009298324584960938
+    },
+    {
+      "test_id": 33,
+      "success": true,
+      "measured_x": 399.5954451698054,
+      "measured_y": 129.31445934642176,
+      "error_px": 0.7960091697601785,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 34,
+      "success": true,
+      "measured_x": 450.98055111085034,
+      "measured_y": 229.99268714093006,
+      "error_px": 0.9805783797828796,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0064373016357421875
+    },
+    {
+      "test_id": 35,
+      "success": true,
+      "measured_x": 2189.5151032583503,
+      "measured_y": 230.09098113824942,
+      "error_px": 0.49335830547343607,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 36,
+      "success": true,
+      "measured_x": 2129.838171860416,
+      "measured_y": 279.8517589076023,
+      "error_px": 0.21946245290822644,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 37,
+      "success": true,
+      "measured_x": 2160.23774397277,
+      "measured_y": 330.38992142787157,
+      "error_px": 0.45668470141002504,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 38,
+      "success": true,
+      "measured_x": 1099.6081766565605,
+      "measured_y": 949.6565921549911,
+      "error_px": 0.5210129369581035,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 39,
+      "success": true,
+      "measured_x": 1199.748673854313,
+      "measured_y": 998.7072355467411,
+      "error_px": 1.3169680190177855,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 40,
+      "success": true,
+      "measured_x": 499.0665972035371,
+      "measured_y": 850.7250730344401,
+      "error_px": 1.181935567498045,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0095367431640625
+    },
+    {
+      "test_id": 41,
+      "success": true,
+      "measured_x": 745.0136889476355,
+      "measured_y": 936.4649120063159,
+      "error_px": 0.8211623232372206,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 42,
+      "success": true,
+      "measured_x": 3279.2466385330436,
+      "measured_y": 626.9639458657368,
+      "error_px": 0.2607467123783074,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 43,
+      "success": true,
+      "measured_x": 369.94539829338754,
+      "measured_y": 69.3901543213941,
+      "error_px": 1.698738275316566,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 44,
+      "success": true,
+      "measured_x": 199.73341054173494,
+      "measured_y": 861.6827532269584,
+      "error_px": 0.5779469001949413,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 45,
+      "success": true,
+      "measured_x": 3052.9342270099237,
+      "measured_y": 723.1890656475928,
+      "error_px": 0.9872761118060688,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 46,
+      "success": true,
+      "measured_x": 134.88928956662016,
+      "measured_y": -94.79091778533197,
+      "error_px": 0.9595278753307892,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 47,
+      "success": true,
+      "measured_x": 1531.3456793781384,
+      "measured_y": 286.2368581822407,
+      "error_px": 0.7706908870118067,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 48,
+      "success": true,
+      "measured_x": 2333.566823783249,
+      "measured_y": 261.85416272468956,
+      "error_px": 0.9462174141831055,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 49,
+      "success": true,
+      "measured_x": 623.192225225427,
+      "measured_y": -4.164024862712443,
+      "error_px": 0.7941579148990132,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 50,
+      "success": true,
+      "measured_x": 842.8879369213918,
+      "measured_y": 355.7812292508919,
+      "error_px": 0.503706250067639,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 51,
+      "success": true,
+      "measured_x": 3073.1246494527372,
+      "measured_y": 223.02429008516896,
+      "error_px": 0.7854247066132105,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 52,
+      "success": true,
+      "measured_x": 601.818262383442,
+      "measured_y": 26.596237255661286,
+      "error_px": 0.6832854748067019,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 53,
+      "success": true,
+      "measured_x": 883.8587351016865,
+      "measured_y": 790.1675983611673,
+      "error_px": 0.9788060888938467,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 54,
+      "success": true,
+      "measured_x": 2363.8482552512673,
+      "measured_y": 553.5497771435824,
+      "error_px": 1.1022980338635862,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 55,
+      "success": true,
+      "measured_x": 1118.0837985648589,
+      "measured_y": 90.99284272352588,
+      "error_px": 0.9141441036572374,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 56,
+      "success": true,
+      "measured_x": 1144.5192441452034,
+      "measured_y": 249.76660207109157,
+      "error_px": 0.5444982794460275,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.015974044799804688
+    },
+    {
+      "test_id": 57,
+      "success": true,
+      "measured_x": 2131.4628755640956,
+      "measured_y": 934.5173700469551,
+      "error_px": 0.6582300650353092,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 58,
+      "success": true,
+      "measured_x": 1760.813736071358,
+      "measured_y": -62.163199999972676,
+      "error_px": 0.4892615729620394,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 59,
+      "success": true,
+      "measured_x": 623.9843865201229,
+      "measured_y": 185.89712155276638,
+      "error_px": 0.07297079711136935,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 60,
+      "success": true,
+      "measured_x": 3196.6493364628795,
+      "measured_y": 486.80832666407184,
+      "error_px": 0.5745562923682308,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.00762939453125
+    },
+    {
+      "test_id": 61,
+      "success": true,
+      "measured_x": 309.4884919889533,
+      "measured_y": 1.353375339295741,
+      "error_px": 0.5703053230191645,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 62,
+      "success": true,
+      "measured_x": 159.32371305911536,
+      "measured_y": 899.6375906320347,
+      "error_px": 0.5910083640698207,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0073909759521484375
+    },
+    {
+      "test_id": 63,
+      "success": true,
+      "measured_x": 2465.0561534077615,
+      "measured_y": 683.4061653367042,
+      "error_px": 0.3892137799707679,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0073909759521484375
+    },
+    {
+      "test_id": 64,
+      "success": true,
+      "measured_x": 635.1248302569164,
+      "measured_y": -3.741463942407575,
+      "error_px": 1.0539608929074111,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.00762939453125
+    },
+    {
+      "test_id": 65,
+      "success": true,
+      "measured_x": 1039.8771896907672,
+      "measured_y": 262.95904231753565,
+      "error_px": 0.5460681407706169,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0073909759521484375
+    },
+    {
+      "test_id": 66,
+      "success": true,
+      "measured_x": 3687.1657195066887,
+      "measured_y": 781.097491589761,
+      "error_px": 1.144288384566989,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0073909759521484375
+    },
+    {
+      "test_id": 67,
+      "success": true,
+      "measured_x": 1714.942983437316,
+      "measured_y": -78.9657311775204,
+      "error_px": 0.995196087338374,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 68,
+      "success": true,
+      "measured_x": 1128.4307632187595,
+      "measured_y": 910.7252448638811,
+      "error_px": 0.5258266903657355,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 69,
+      "success": true,
+      "measured_x": 2172.458281669375,
+      "measured_y": 271.5243750819454,
+      "error_px": 0.9735056168285247,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 70,
+      "success": true,
+      "measured_x": 177.65454532461578,
+      "measured_y": 34.2411671248234,
+      "error_px": 0.7060654366265634,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 71,
+      "success": true,
+      "measured_x": 790.3309227564679,
+      "measured_y": 338.786509417598,
+      "error_px": 0.4585580161318646,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.00667572021484375
+    },
+    {
+      "test_id": 72,
+      "success": true,
+      "measured_x": 1459.1077388477727,
+      "measured_y": 413.7047141283777,
+      "error_px": 0.6207977962808215,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.00667572021484375
+    },
+    {
+      "test_id": 73,
+      "success": true,
+      "measured_x": 627.4738680576331,
+      "measured_y": 577.2285548383666,
+      "error_px": 0.5691383917030065,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 74,
+      "success": true,
+      "measured_x": 414.5644049110214,
+      "measured_y": 805.285296480839,
+      "error_px": 0.7411236542280075,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 75,
+      "success": true,
+      "measured_x": 313.50832297885137,
+      "measured_y": 969.2266591371628,
+      "error_px": 0.7896873591626273,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0064373016357421875
+    },
+    {
+      "test_id": 76,
+      "success": true,
+      "measured_x": 1372.3525971435956,
+      "measured_y": 274.4047995469085,
+      "error_px": 1.531739493525472,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 77,
+      "success": true,
+      "measured_x": 208.61095998557127,
+      "measured_y": 817.4676742652762,
+      "error_px": 0.2576573674195129,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0069141387939453125
+    },
+    {
+      "test_id": 78,
+      "success": true,
+      "measured_x": 1274.5272451664785,
+      "measured_y": 741.1674082107209,
+      "error_px": 0.3736872226354934,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007152557373046875
+    },
+    {
+      "test_id": 79,
+      "success": true,
+      "measured_x": 1372.278503633494,
+      "measured_y": 165.04696323387947,
+      "error_px": 0.12396088079012127,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.00667572021484375
+    },
+    {
+      "test_id": 80,
+      "success": true,
+      "measured_x": 745.4101398089537,
+      "measured_y": 202.0779960332754,
+      "error_px": 0.5539274269078555,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007867813110351562
+    },
+    {
+      "test_id": 81,
+      "success": true,
+      "measured_x": 1512.00284108279,
+      "measured_y": 648.2491114642293,
+      "error_px": 0.2673269720894325,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.010251998901367188
+    },
+    {
+      "test_id": 82,
+      "success": true,
+      "measured_x": 702.5967666405332,
+      "measured_y": 155.6667334357456,
+      "error_px": 0.45344808960874416,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0095367431640625
+    },
+    {
+      "test_id": 83,
+      "success": true,
+      "measured_x": 672.810029973861,
+      "measured_y": 385.90307410643186,
+      "error_px": 0.2834757925996706,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.008344650268554688
+    },
+    {
+      "test_id": 84,
+      "success": true,
+      "measured_x": 1309.0607195328967,
+      "measured_y": 662.1653374191883,
+      "error_px": 1.1163402616217655,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.009775161743164062
+    },
+    {
+      "test_id": 85,
+      "success": true,
+      "measured_x": 1548.94243959065,
+      "measured_y": 515.3431133871688,
+      "error_px": 0.43143861629338404,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 86,
+      "success": true,
+      "measured_x": 382.3438737711551,
+      "measured_y": 727.4042634884195,
+      "error_px": 0.6143050361059772,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 87,
+      "success": true,
+      "measured_x": 1355.1722576910827,
+      "measured_y": 593.3427785774978,
+      "error_px": 1.3522655214520676,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 88,
+      "success": true,
+      "measured_x": 1370.741130262115,
+      "measured_y": 534.3200845717869,
+      "error_px": 1.1502264662208088,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007867813110351562
+    },
+    {
+      "test_id": 89,
+      "success": true,
+      "measured_x": 994.4639830569315,
+      "measured_y": 477.13142886462066,
+      "error_px": 0.8998365604008176,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 90,
+      "success": true,
+      "measured_x": 238.7168349943413,
+      "measured_y": 194.79724265060867,
+      "error_px": 0.1674327603942674,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 91,
+      "success": true,
+      "measured_x": 248.1284876012333,
+      "measured_y": 658.7983296795181,
+      "error_px": 1.2928484940596403,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 92,
+      "success": true,
+      "measured_x": 677.8506315307227,
+      "measured_y": 547.939476268922,
+      "error_px": 0.3983648174498394,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 93,
+      "success": true,
+      "measured_x": 1578.5877702202288,
+      "measured_y": 319.9795185621193,
+      "error_px": 1.0940275181880208,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 94,
+      "success": true,
+      "measured_x": 823.8681683260255,
+      "measured_y": 764.629885752583,
+      "error_px": 0.26926163325227037,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 95,
+      "success": true,
+      "measured_x": 548.0211938613709,
+      "measured_y": 168.96449390847587,
+      "error_px": 1.2470776653684554,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 96,
+      "success": true,
+      "measured_x": 640.4221871569559,
+      "measured_y": 241.98454629333466,
+      "error_px": 0.10981351187107397,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 97,
+      "success": true,
+      "measured_x": 1612.7877353537103,
+      "measured_y": 810.651811800827,
+      "error_px": 0.6070843258057803,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 98,
+      "success": true,
+      "measured_x": 1163.1303468826893,
+      "measured_y": 866.3877654482874,
+      "error_px": 0.6121681473361692,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 99,
+      "success": true,
+      "measured_x": 1421.520870604871,
+      "measured_y": 263.8922324113363,
+      "error_px": 0.2957134064274092,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 100,
+      "success": true,
+      "measured_x": 1556.853068896673,
+      "measured_y": 574.7779792310262,
+      "error_px": 0.22646172194101286,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 101,
+      "success": true,
+      "measured_x": 72.76820546365067,
+      "measured_y": 75.53643516491523,
+      "error_px": 0.5620016393669164,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 102,
+      "success": true,
+      "measured_x": 1852.4716600722095,
+      "measured_y": 43.83704912477242,
+      "error_px": 0.6172505613045136,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 103,
+      "success": true,
+      "measured_x": 48.77299749638212,
+      "measured_y": 1017.2651190035706,
+      "error_px": 0.3889844469708975,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 104,
+      "success": true,
+      "measured_x": 1873.036886663801,
+      "measured_y": 1033.8953245893017,
+      "error_px": 0.6205570418774494,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 105,
+      "success": true,
+      "measured_x": 40.65632076505206,
+      "measured_y": 541.148785112791,
+      "error_px": 0.8123233875593133,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.009775161743164062
+    },
+    {
+      "test_id": 106,
+      "success": true,
+      "measured_x": 1856.8237816104704,
+      "measured_y": 529.8898423030819,
+      "error_px": 1.0135611485276315,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.009298324584960938
+    },
+    {
+      "test_id": 107,
+      "success": true,
+      "measured_x": 944.2689829215867,
+      "measured_y": 52.79333895666946,
+      "error_px": 0.8844155043353057,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.008821487426757812
+    },
+    {
+      "test_id": 108,
+      "success": true,
+      "measured_x": 976.6380443073498,
+      "measured_y": 1013.7242338394949,
+      "error_px": 1.3403831661065975,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 109,
+      "success": true,
+      "measured_x": 61.011478268475685,
+      "measured_y": 68.06347897415198,
+      "error_px": 0.2660915564238489,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 110,
+      "success": true,
+      "measured_x": 1854.599119127394,
+      "measured_y": 78.22555652016995,
+      "error_px": 0.6479753647361284,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 111,
+      "success": true,
+      "measured_x": 79.74300767422001,
+      "measured_y": 1010.1156556704467,
+      "error_px": 1.2459059740095277,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 112,
+      "success": true,
+      "measured_x": 1859.8500596604745,
+      "measured_y": 1012.4075962231608,
+      "error_px": 0.37459279932112355,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 113,
+      "success": true,
+      "measured_x": 51.558127140300215,
+      "measured_y": 521.5719062948805,
+      "error_px": 0.19068589267942698,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 114,
+      "success": true,
+      "measured_x": 1863.8477646964475,
+      "measured_y": 540.339760712925,
+      "error_px": 0.5832006217082386,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 115,
+      "success": true,
+      "measured_x": 942.9942158108072,
+      "measured_y": 51.85913178219532,
+      "error_px": 1.1760555484475381,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 116,
+      "success": true,
+      "measured_x": 977.1068403710642,
+      "measured_y": 1009.2745991919874,
+      "error_px": 0.8350341287141576,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 117,
+      "success": true,
+      "measured_x": 45.15146452025303,
+      "measured_y": 59.48221979239334,
+      "error_px": 0.6514266097960045,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 118,
+      "success": true,
+      "measured_x": 1879.3566191539292,
+      "measured_y": 50.25730838296466,
+      "error_px": 0.5792696980238505,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 119,
+      "success": true,
+      "measured_x": 65.85451863763831,
+      "measured_y": 1031.2793294761975,
+      "error_px": 1.3138663792429444,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 120,
+      "success": true,
+      "measured_x": 1849.3185497032239,
+      "measured_y": 1028.8671615433489,
+      "error_px": 0.3214488252669702,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.026702880859375
+    },
+    {
+      "test_id": 121,
+      "success": true,
+      "measured_x": 54.05462019012336,
+      "measured_y": 544.3553542415627,
+      "error_px": 1.1441170569956505,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 122,
+      "success": true,
+      "measured_x": 1865.693884539361,
+      "measured_y": 541.4446044322897,
+      "error_px": 0.35295887838014656,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 123,
+      "success": true,
+      "measured_x": 942.8020645950652,
+      "measured_y": 72.67309868628016,
+      "error_px": 1.0961091920583264,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 124,
+      "success": true,
+      "measured_x": 952.5464733020062,
+      "measured_y": 1008.3519944422491,
+      "error_px": 0.9356305423657917,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 125,
+      "success": true,
+      "measured_x": 41.38818270668689,
+      "measured_y": 62.782281290660336,
+      "error_px": 0.8873087058604618,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 126,
+      "success": true,
+      "measured_x": 1265.1754959712248,
+      "measured_y": 114.42058368049781,
+      "error_px": 0.2941886821456706,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 127,
+      "success": true,
+      "measured_x": 979.2167249088918,
+      "measured_y": 299.2597121849462,
+      "error_px": 1.5843456202804362,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 128,
+      "success": true,
+      "measured_x": 1209.4701378003854,
+      "measured_y": 253.79866321238546,
+      "error_px": 0.4224210098020829,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 129,
+      "success": true,
+      "measured_x": 1289.3297876762076,
+      "measured_y": 440.92000769806975,
+      "error_px": 1.0918788558863868,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 130,
+      "success": true,
+      "measured_x": 1710.9276441351246,
+      "measured_y": 220.38313378601174,
+      "error_px": 0.681963973878096,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 131,
+      "success": true,
+      "measured_x": 687.9494239859785,
+      "measured_y": 199.86256101777195,
+      "error_px": 1.3153132437363917,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 132,
+      "success": true,
+      "measured_x": 1690.3806368374264,
+      "measured_y": 872.0186543646985,
+      "error_px": 0.10066485765252785,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 133,
+      "success": true,
+      "measured_x": 543.6684985762363,
+      "measured_y": 680.679854470865,
+      "error_px": 0.10647855224579046,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 134,
+      "success": true,
+      "measured_x": 1505.2066225300534,
+      "measured_y": 588.2492339771903,
+      "error_px": 0.5290887677978695,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.008106231689453125
+    },
+    {
+      "test_id": 135,
+      "success": true,
+      "measured_x": 1010.8809327614587,
+      "measured_y": 312.5044245556195,
+      "error_px": 0.3463357072471711,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 136,
+      "success": true,
+      "measured_x": 259.64464773342047,
+      "measured_y": 889.5816958115038,
+      "error_px": 0.49314112837736745,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 137,
+      "success": true,
+      "measured_x": 1648.4787731390932,
+      "measured_y": 657.9297707315419,
+      "error_px": 0.8357742139971976,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 138,
+      "success": true,
+      "measured_x": 681.5731594968954,
+      "measured_y": 407.8780466150445,
+      "error_px": 1.6603185648047805,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 139,
+      "success": true,
+      "measured_x": 1349.2290668004316,
+      "measured_y": 888.289956317789,
+      "error_px": 1.3056160112557846,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 140,
+      "success": true,
+      "measured_x": 1625.500123847004,
+      "measured_y": 786.0594800657569,
+      "error_px": 0.3696056305278628,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 141,
+      "success": true,
+      "measured_x": 1203.4202522410267,
+      "measured_y": 173.5886622048136,
+      "error_px": 0.985274469945471,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 142,
+      "success": true,
+      "measured_x": 377.2905238154758,
+      "measured_y": 891.6647268350584,
+      "error_px": 1.176169180322904,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 143,
+      "success": true,
+      "measured_x": 1143.4725580184722,
+      "measured_y": 108.7660529122265,
+      "error_px": 0.7901439178011288,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0050067901611328125
+    },
+    {
+      "test_id": 144,
+      "success": true,
+      "measured_x": 274.8279256525453,
+      "measured_y": 683.2338705282654,
+      "error_px": 0.7124819048842257,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 145,
+      "success": true,
+      "measured_x": 108.31739035678858,
+      "measured_y": 241.7535334434198,
+      "error_px": 0.4579734567810793,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 146,
+      "success": true,
+      "measured_x": 1043.049899703384,
+      "measured_y": 709.2332152935106,
+      "error_px": 0.8543231307889927,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 147,
+      "success": true,
+      "measured_x": 1221.1411396632325,
+      "measured_y": 297.1241330684859,
+      "error_px": 0.3288657248187221,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 148,
+      "success": true,
+      "measured_x": 1325.2392409880201,
+      "measured_y": 308.99683400584695,
+      "error_px": 0.36336673653401674,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 149,
+      "success": true,
+      "measured_x": 659.3889017304864,
+      "measured_y": 757.5233600830574,
+      "error_px": 0.6799831620247849,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 150,
+      "success": true,
+      "measured_x": 1216.6739538187758,
+      "measured_y": 847.6286580060416,
+      "error_px": 0.7615075819961499,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 151,
+      "success": true,
+      "measured_x": 1850.226157979629,
+      "measured_y": 14.80304164572292,
+      "error_px": 0.29990002512411085,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 152,
+      "success": true,
+      "measured_x": 300.0793254499795,
+      "measured_y": 439.28517972033364,
+      "error_px": 0.7192082864071668,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 153,
+      "success": true,
+      "measured_x": 350.4081671483101,
+      "measured_y": 529.871596012302,
+      "error_px": 0.4278878416318285,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 154,
+      "success": true,
+      "measured_x": 1889.612454626461,
+      "measured_y": 155.55024726155588,
+      "error_px": 0.6730256053088051,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 155,
+      "success": true,
+      "measured_x": 799.5125632579478,
+      "measured_y": 359.1986384743456,
+      "error_px": 0.9379631508228723,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 156,
+      "success": true,
+      "measured_x": 1879.0438062423082,
+      "measured_y": 15.306597660585718,
+      "error_px": 1.0041457203640651,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 157,
+      "success": true,
+      "measured_x": 329.19571614387337,
+      "measured_y": 440.93842898743696,
+      "error_px": 1.2359294015791877,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 158,
+      "success": true,
+      "measured_x": 378.7548911134103,
+      "measured_y": 530.9063431899052,
+      "error_px": 1.5400500372884804,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 159,
+      "success": true,
+      "measured_x": 1920.0160118947078,
+      "measured_y": 154.9200999758169,
+      "error_px": 0.08148861660744815,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 160,
+      "success": true,
+      "measured_x": 829.6002467900015,
+      "measured_y": 360.1928170502392,
+      "error_px": 0.4438254654332677,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 161,
+      "success": true,
+      "measured_x": 1909.8792532014127,
+      "measured_y": 15.580108222454703,
+      "error_px": 0.5925414239769613,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 162,
+      "success": true,
+      "measured_x": 359.9627774945104,
+      "measured_y": 440.0559581561496,
+      "error_px": 0.06720736681780747,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 163,
+      "success": true,
+      "measured_x": 409.6999655710287,
+      "measured_y": 529.9419720942991,
+      "error_px": 0.3055943330759889,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 164,
+      "success": true,
+      "measured_x": 1950.069243260637,
+      "measured_y": 154.03269957138446,
+      "error_px": 0.9697756175236926,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 165,
+      "success": true,
+      "measured_x": 859.1584503055882,
+      "measured_y": 360.38208743905807,
+      "error_px": 0.9242276230726739,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 166,
+      "success": true,
+      "measured_x": 1939.9939282787168,
+      "measured_y": 14.872101352351642,
+      "error_px": 0.12804268768508337,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 167,
+      "success": true,
+      "measured_x": 389.9100909509323,
+      "measured_y": 440.1644621252945,
+      "error_px": 0.18743379567369609,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 168,
+      "success": true,
+      "measured_x": 439.6030844635762,
+      "measured_y": 529.5452245883744,
+      "error_px": 0.6036245671556716,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 169,
+      "success": true,
+      "measured_x": 1980.00766717805,
+      "measured_y": 154.43518715965735,
+      "error_px": 0.5648648778559235,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.006198883056640625
+    },
+    {
+      "test_id": 170,
+      "success": true,
+      "measured_x": 890.1244913033893,
+      "measured_y": 359.0368712050148,
+      "error_px": 0.9711411639659925,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 171,
+      "success": true,
+      "measured_x": 447.74985557837846,
+      "measured_y": 313.89494146976705,
+      "error_px": 0.5210917911642058,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 172,
+      "success": true,
+      "measured_x": 675.6131061212837,
+      "measured_y": 474.37167375823236,
+      "error_px": 0.5153872184419857,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 173,
+      "success": true,
+      "measured_x": 655.579041218444,
+      "measured_y": 335.7229104263724,
+      "error_px": 0.9736348866742899,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 174,
+      "success": true,
+      "measured_x": 1819.766681109965,
+      "measured_y": 434.50529502906613,
+      "error_px": 1.330907092060602,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 175,
+      "success": true,
+      "measured_x": 517.1702686231478,
+      "measured_y": 326.21536746441416,
+      "error_px": 0.44386998849814663,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 176,
+      "success": true,
+      "measured_x": 1166.5525772281583,
+      "measured_y": 540.8926796427073,
+      "error_px": 0.46418067006609265,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 177,
+      "success": true,
+      "measured_x": 1059.9777240224755,
+      "measured_y": 533.5719866296425,
+      "error_px": 0.44217651089082227,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 178,
+      "success": true,
+      "measured_x": 404.9058552885417,
+      "measured_y": 757.2027015403544,
+      "error_px": 0.9116052287764246,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0050067901611328125
+    },
+    {
+      "test_id": 179,
+      "success": true,
+      "measured_x": 333.62388273464205,
+      "measured_y": 204.0930589405474,
+      "error_px": 0.9811010925841631,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 180,
+      "success": true,
+      "measured_x": 1061.1938291336264,
+      "measured_y": 379.10813487900435,
+      "error_px": 0.8432489128896196,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0059604644775390625
+    },
+    {
+      "test_id": 181,
+      "success": true,
+      "measured_x": 1531.9739425576774,
+      "measured_y": 904.5639639250761,
+      "error_px": 1.5513497134330902,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 182,
+      "success": true,
+      "measured_x": 1715.2244673344471,
+      "measured_y": 412.83047830571326,
+      "error_px": 0.1869589981069182,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 183,
+      "success": true,
+      "measured_x": 254.0648404673069,
+      "measured_y": 386.02217513856556,
+      "error_px": 0.6751627727110404,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 184,
+      "success": true,
+      "measured_x": 909.3122553054355,
+      "measured_y": 773.3678071072355,
+      "error_px": 0.41860237859037497,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 185,
+      "success": true,
+      "measured_x": 1564.0139689998227,
+      "measured_y": 822.3280236163852,
+      "error_px": 1.310415029870698,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.007867813110351562
+    },
+    {
+      "test_id": 186,
+      "success": true,
+      "measured_x": 586.4290361838495,
+      "measured_y": 426.9823191834131,
+      "error_px": 0.6738136964663323,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 187,
+      "success": true,
+      "measured_x": 505.22171007303,
+      "measured_y": 264.3316335682007,
+      "error_px": 0.9547145714156868,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 188,
+      "success": true,
+      "measured_x": 728.2000430862278,
+      "measured_y": 569.3707701234191,
+      "error_px": 1.0672803414826801,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 189,
+      "success": true,
+      "measured_x": 1527.2904222612622,
+      "measured_y": 696.4877728005822,
+      "error_px": 0.44337927762851814,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 190,
+      "success": true,
+      "measured_x": 1087.7591061068713,
+      "measured_y": 145.7411610299935,
+      "error_px": 0.5653826523034663,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0050067901611328125
+    },
+    {
+      "test_id": 191,
+      "success": true,
+      "measured_x": 1158.0543776895377,
+      "measured_y": 970.3570566831576,
+      "error_px": 0.9226205824003803,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 192,
+      "success": true,
+      "measured_x": 340.44453304786396,
+      "measured_y": 555.9672510178807,
+      "error_px": 0.5258241365579972,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0054836273193359375
+    },
+    {
+      "test_id": 193,
+      "success": true,
+      "measured_x": 1608.9406976178245,
+      "measured_y": 752.1910454646985,
+      "error_px": 0.344803065651767,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.0057220458984375
+    },
+    {
+      "test_id": 194,
+      "success": true,
+      "measured_x": 1298.8647623501206,
+      "measured_y": 717.4248466987113,
+      "error_px": 0.7611507218013696,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 195,
+      "success": true,
+      "measured_x": 718.4338412037786,
+      "measured_y": 358.66993730000587,
+      "error_px": 0.32778957346915877,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 196,
+      "success": true,
+      "measured_x": 1492.309024457152,
+      "measured_y": 813.4675089040798,
+      "error_px": 0.604569294963224,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 197,
+      "success": true,
+      "measured_x": 1591.7229974305264,
+      "measured_y": 903.8775274806161,
+      "error_px": 0.42379831940298435,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 198,
+      "success": true,
+      "measured_x": 979.3702871872571,
+      "measured_y": 540.3941029986476,
+      "error_px": 0.950402588701724,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 199,
+      "success": true,
+      "measured_x": 1473.2039501311226,
+      "measured_y": 672.0557794997188,
+      "error_px": 0.16193143504060784,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.005245208740234375
+    },
+    {
+      "test_id": 200,
+      "success": true,
+      "measured_x": 1307.4323495314536,
+      "measured_y": 799.5686295744134,
+      "error_px": 0.730586207517686,
+      "error_within_threshold": true,
+      "execution_time_ms": 0.008106231689453125
+    }
+  ]
+}
