@@ -283,6 +283,8 @@ def mock_calibration():
             self.offset = np.array([0.0, 0.0])
 
         def calibrate(self, measured, true):
+            if len(measured) < 3:
+                raise ValueError("Calibration requires at least 3 points")
             self.offset = np.mean(measured - true, axis=0)
             self.is_calibrated = True
 
@@ -290,6 +292,12 @@ def mock_calibration():
             if not self.is_calibrated:
                 return measured
             return measured - self.offset
+
+        def correct_batch(self, measured_batch):
+            """Correct multiple coordinates at once"""
+            if not self.is_calibrated:
+                return measured_batch
+            return measured_batch - self.offset
 
         def save(self, filepath):
             data = {
@@ -345,23 +353,40 @@ def mock_coordinate_transformer():
 @pytest.fixture
 def mock_click_executor():
     """Mock click executor that doesn't actually click"""
+    from dataclasses import dataclass
+
+    @dataclass
+    class ClickResult:
+        """Result of a click operation"""
+        x: float
+        y: float
+        button: str = 'left'
+        double: bool = False
+        success: bool = True
+
     class MockClickExecutor:
         def __init__(self):
             self.last_click = None
             self.click_count = 0
             self.clicks_history = []
 
-        def click(self, x, y, button='left', double=False):
+        def click(self, x, y, button='left', double=False, auto_clamp=False):
             """Record click without executing"""
-            self.last_click = {
-                'x': x,
-                'y': y,
-                'button': button,
-                'double': double
-            }
+            result = ClickResult(
+                x=x,
+                y=y,
+                button=button,
+                double=double,
+                success=True
+            )
+            self.last_click = result
             self.click_count += 1
-            self.clicks_history.append(self.last_click.copy())
-            return True
+            self.clicks_history.append(result)
+            return result
+
+        def get_click_count(self):
+            """Get total click count"""
+            return self.click_count
 
         def reset(self):
             """Reset click history"""

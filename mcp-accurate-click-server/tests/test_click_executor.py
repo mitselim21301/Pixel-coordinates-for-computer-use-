@@ -555,10 +555,10 @@ class TestClickPerformance:
         """Test rapid click execution"""
         executor = ClickExecutor()
 
-        # Execute many clicks rapidly
+        # Execute many clicks rapidly (keep coordinates within 1920x1080 bounds)
         _, elapsed = benchmark_timer.time_function(
             'rapid_clicks',
-            lambda: [executor.click(i*10, i*10) for i in range(1000)],
+            lambda: [executor.click((i*10) % 1920, (i*10) % 1080) for i in range(1000)],
         )
 
         # Should be very fast (< 10ms for 1000 clicks in mock mode)

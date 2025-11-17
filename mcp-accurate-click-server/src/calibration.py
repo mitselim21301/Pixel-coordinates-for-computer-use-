@@ -161,6 +161,27 @@ class SimpleCalibration:
         measured_coord = np.asarray(measured_coord)
         return measured_coord - self.offset
 
+    def correct_batch(self, measured_coords: np.ndarray) -> np.ndarray:
+        """
+        Apply calibration correction to multiple coordinates at once.
+
+        Args:
+            measured_coords: Array of measured coordinates, shape (N, 2)
+
+        Returns:
+            Array of corrected coordinates, shape (N, 2)
+
+        Raises:
+            RuntimeError: If calibration hasn't been performed
+        """
+        if not self.is_calibrated:
+            raise RuntimeError(
+                "Calibration not performed. Call calibrate() first."
+            )
+
+        measured_coords = np.asarray(measured_coords)
+        return measured_coords - self.offset
+
     def save(self, filepath: str) -> None:
         """
         Save calibration to JSON file.
@@ -404,6 +425,28 @@ class RegionalCalibration:
         offset = self.regional_offsets.get(region, self.global_offset)
 
         return measured_coord - offset
+
+    def correct_batch(self, measured_coords: np.ndarray) -> np.ndarray:
+        """
+        Apply regional calibration correction to multiple coordinates at once.
+
+        Args:
+            measured_coords: Array of measured coordinates, shape (N, 2)
+
+        Returns:
+            Array of corrected coordinates, shape (N, 2)
+
+        Raises:
+            RuntimeError: If calibration hasn't been performed
+        """
+        if not self.is_calibrated:
+            raise RuntimeError(
+                "Calibration not performed. Call calibrate() first."
+            )
+
+        measured_coords = np.asarray(measured_coords)
+        corrected = np.array([self.correct(coord) for coord in measured_coords])
+        return corrected
 
     def save(self, filepath: str) -> None:
         """

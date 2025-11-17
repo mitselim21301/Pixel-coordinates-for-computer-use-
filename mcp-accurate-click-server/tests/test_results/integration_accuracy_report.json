@@ -1,0 +1,20 @@
+{
+  "test_type": "integration_accuracy",
+  "calibration": {
+    "num_points": 30,
+    "method": "simple_offset"
+  },
+  "test_set_size": 500,
+  "metrics": {
+    "mean_error": 0.7087947537540951,
+    "median_error": 0.6570142711584097,
+    "std_error": 0.3798923812020263,
+    "max_error": 2.1902281594508706,
+    "min_error": 0.007758334497604981,
+    "within_1px": 0.792,
+    "within_2px": 0.992,
+    "within_5px": 1.0,
+    "num_samples": 500
+  },
+  "success": true
+}

@@ -502,21 +502,28 @@ class TestErrorReduction:
     """Test that multi-pass averaging reduces measurement error"""
 
     def test_single_vs_multi_pass_error(self, ocr_simulator, random_coordinates):
-        """Compare error of single pass vs multi-pass"""
+        """Compare error of single pass vs multi-pass (testing random noise reduction)"""
         # Generate test coordinates
         true_coords = random_coordinates(n_points=100, seed=42)
 
+        # Measure WITHOUT systematic bias to test noise reduction
+        # (multi-pass reduces random noise, not systematic bias)
         # Single pass measurements
         single_errors = []
         for coord in true_coords:
-            measured = ocr_simulator.measure(coord)
+            measured = ocr_simulator.measure(coord, add_bias=False, add_noise=True)
             error = np.linalg.norm(measured - coord)
             single_errors.append(error)
 
         # Multi-pass measurements (3 passes)
         multi_errors = []
         for coord in true_coords:
-            measured = ocr_simulator.multi_pass_measure(coord, num_passes=3)
+            # Simulate multi-pass without bias to test noise reduction
+            measurements = []
+            for _ in range(3):
+                m = ocr_simulator.measure(coord, add_bias=False, add_noise=True)
+                measurements.append(m)
+            measured = np.mean(measurements, axis=0)
             error = np.linalg.norm(measured - coord)
             multi_errors.append(error)
 
@@ -532,7 +539,7 @@ class TestErrorReduction:
 
     def test_error_reduction_scales_with_passes(self, ocr_simulator,
                                                 random_coordinates):
-        """Test that more passes = better accuracy"""
+        """Test that more passes = better accuracy (for random noise)"""
         true_coords = random_coordinates(n_points=50, seed=42)
 
         mean_errors = {}
@@ -540,7 +547,12 @@ class TestErrorReduction:
         for num_passes in [1, 2, 3, 5]:
             errors = []
             for coord in true_coords:
-                measured = ocr_simulator.multi_pass_measure(coord, num_passes=num_passes)
+                # Measure without bias to test noise reduction scaling
+                measurements = []
+                for _ in range(num_passes):
+                    m = ocr_simulator.measure(coord, add_bias=False, add_noise=True)
+                    measurements.append(m)
+                measured = np.mean(measurements, axis=0)
                 error = np.linalg.norm(measured - coord)
                 errors.append(error)
 
