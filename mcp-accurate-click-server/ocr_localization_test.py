@@ -8,6 +8,8 @@ the pixel distance between the detected box center and the true center.
 This is the honest input to the calibration: if this error is ~0.25px the tool's
 claims hold; if it's several px, the advertised 99.6%/0.24px is unreachable.
 """
+import os
+os.environ["FLAGS_use_mkldnn"] = "0"  # avoid oneDNN PIR crash on this CPU
 import sys, numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
@@ -43,15 +45,31 @@ img.save(img_path)
 print(f"Rendered {len(truth)} words to {img_path} ({W}x{H})")
 
 from paddleocr import PaddleOCR
-ocr = PaddleOCR(use_angle_cls=True, lang="en", show_log=False)
-result = ocr.ocr(img_path, cls=True)
 
 dets = []
-for line in (result[0] or []):
-    box, (text, conf) = line
-    box = np.array(box)
-    cx, cy = box[:, 0].mean(), box[:, 1].mean()
-    dets.append((text, cx, cy, conf))
+try:
+    # PaddleOCR 3.x API; disable mkldnn to dodge the oneDNN CPU crash
+    try:
+        ocr = PaddleOCR(lang="en", enable_mkldnn=False)
+    except Exception:
+        ocr = PaddleOCR(lang="en")
+    results = ocr.predict(img_path)
+    for res in results:
+        d = res if isinstance(res, dict) else getattr(res, "json", {}).get("res", res)
+        polys = d.get("rec_polys", d.get("dt_polys", []))
+        texts = d.get("rec_texts", [])
+        scores = d.get("rec_scores", [1.0] * len(texts))
+        for box, text, conf in zip(polys, texts, scores):
+            box = np.array(box)
+            dets.append((text, box[:, 0].mean(), box[:, 1].mean(), conf))
+except Exception:
+    # PaddleOCR 2.x fallback
+    ocr = PaddleOCR(use_angle_cls=True, lang="en")
+    result = ocr.ocr(img_path, cls=True)
+    for line in (result[0] or []):
+        box, (text, conf) = line
+        box = np.array(box)
+        dets.append((text, box[:, 0].mean(), box[:, 1].mean(), conf))
 
 print(f"PaddleOCR returned {len(dets)} detections\n")
 print(f"{'truth':>10} {'detected':>10} {'true_xy':>14} {'det_xy':>14} {'err_px':>8}")
